@@ -2,6 +2,7 @@
     --title: 'ChosunKg';
     --content: 'ChosunSg';
     --awesome: 'Font Awesome 6 Free';
+    --black: "#131115"
 }
 
 @font-face {
@@ -16,4 +17,71 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunKg.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*header*/
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background-color: #131115;
+    border-bottom: 2px solid #fff;
+}
+
+header h1 {
+    text-indent: -9999px;
+    overflow: hidden;
+    width: 120px;
+    height: 60px;
+    background: url(../img/8th_logo_white.png) center /100% no-repeat;
+    display: block;
+}
+
+header nav {
+    width: 50%;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+header nav li {
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: var(--content);
+    cursor: pointer;
+    position: relative;
+}
+
+header nav li::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: #fff;
+    left: -1%;
+    bottom: -5px;
+    transition: ease-out .2s;
+}
+
+header nav li:hover::after {
+    width: 102%;
+}
+
+header .mobile {
+    position: absolute;
+    left: 0;
+    display: none;
 }
