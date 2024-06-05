@@ -25,16 +25,22 @@
     list-style: none;
 }
 
+.screen_out {
+    display: none;
+}
+
 /*header*/
 
 header {
-    position: relative;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
     background-color: #131115;
     border-bottom: 2px solid #fff;
+    width: 100%;
+    z-index: 1;
 }
 
 header h1 {
@@ -134,3 +140,37 @@ header .mobile.close span {
 
 
 
+/* body */
+#slogan {
+    border: 1px solid red;
+    height: 100vh;
+}
+
+#slogan .container {
+    border: 1px solid #131115;
+    height: 40em;
+    width: 40em;
+    position: relative;
+    top: 50%;
+    left: -10%;
+    transform: scale(1.5) translateY(-40%);
+}
+
+#slogan .container li {
+    text-indent: -9999px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+#slogan .sun {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: -27%;
+    transform: translate(50%, -50%);
+    background-color: #ffcc00;
+    box-shadow: 0 0 3em rgb(183, 183, 183);
+    cursor: default;
+}

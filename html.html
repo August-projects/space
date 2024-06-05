@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8th_space</title>
     <meta name="keywords" content="포트폴리오, 웹퍼블리셔">
     <meta name="description" content="홍승연의 웹/디자인 포트폴리오 입니다.">
     <meta property="og:type" content="website">
@@ -19,652 +19,260 @@
     <link rel="icon" href="./favicon_io/favicon.ico" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script defer src="./index.js"></script>
 </head>
-
 <body>
-    
     <header>
-        <h1>홍승연의 포트폴리오</h1>
+        <h1><a href="#">홍승연의 포트폴리오 입니다</a></h1>
         <nav>
-            <ul>
-                <li class="on">home</li>
-                <li>about</li>
-                <li>portfolio</li>
-                <li>contact</li>
-            </ul>
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">portfolio</a>
+            <a href="#">contact</a>
         </nav>
-        <button class="mobile"><span>mobile</span></button>
     </header>
     <main>
-        <div class="twinkle">
-            <div id="cursor"></div>
-            <section id="slogan">
-                <h2>slogan</h2>
-                <p id="msg"></p>
-                <ul class="container">
-                    <li class="sun">
-                        limitless
+        <section class="slogan">
+            <h2>slogan</h2>
+            <ul>
+                <li>planet</li>
+                <li>satellite</li>
+            </ul>
+            <ul>
+                <li>To infinity and beyond !</li>
+                <li>무한한 가능성, 그리고 그 너머를 꿈꾸는 개발자 홍승연입니다.</li>
+            </ul>
+            <p>scroll down</p>
+        </section>
+        <section>
+            <h2>About Me</h2>
+            <img src="./img/me.png" alt="me">
+            <h3>Hong Seung - Yeon</h3>
+            <ul>
+                <li><p>안녕하세요!</p></li>
+                <li><p>웹퍼블리셔 <strong>홍승연</strong>입니다.</p></li>
+                <li><p>현재에 안주하지 않고 무한히 발전하고자 하는 마음가짐으로 노력하겠습니다.</p></li>
+                <li><p>배움과 도전을 즐기며 동시에 끊임없이 나아가는 저의 모습을 기대해주세요 !</p></li>
+            </ul>
+            <button>skill</button>
+            <ul>
+                <li>html / css</li>
+                <li>js / jquery</li>
+                <li>git</li>
+                <li>figma</li>
+                <li>photoshop</li>
+                <li>illurstrator</li>
+                <li>premier pro</li>
+                <li>affter effect</li>
+            </ul>
+
+            <article>
+                <h3>study</h3>
+                <ul>
+                    <li>
+                        <span>html</span>
+                        <details>
+                            <summary class="screen_out">html study</summary>
+                            <h4>hyper text markup language</h4>
+                            <p>웹 표준을 고려하여 기본에 충실하고 의미있는 마크업</p>
+                            <ul>
+                                <li>html요소(태그)</li>
+                                <li>웹 표준 마크업</li>
+                                <li>form문 활용 검색창 생성</li>
+                            </ul>
+                            <a href="#">더보기</a>
+                        </details>
+                        <button>view more</button>
                     </li>
-                    <li class="earth">
-                        <span class="moon"></span>endless
+                    <li><span>css</span>
+                        <details>
+                            <summary class="screen_out">css study</summary>
+                            <h4>CASCADING STYLE SHEET</h4>
+                            <p>디자인을 강조하는 애니메이션 / 사용환경을 고려한 반응형 웹 디자인</p>
+                            <ul>
+                                <li>css 주요 속성</li>
+                                <li>가상클래스(가상요소)</li>
+                                <li>웹폰트+폰트어썸</li>
+                                <li>레이아웃</li>
+                                <li>IR / IS 기법</li>
+                                <li>구체성</li>
+                                <li>트랜지션+트랜스폼</li>
+                                <li>CSS 변수</li>
+                                <li>3D</li>
+                                <li>반응형 웹</li>
+                                <li>SCSS</li>
+                            </ul>
+                            <a href="#">더보기</a>
+                        </details>
+                        <button>view more</button>
                     </li>
-                    <li class="mercury">
-                        infinity
+                    <li><span>java script</span>
+                        <details>
+                            <summary class="screen_out">css study</summary>
+                            <h4>객체 기반 스크립트 프로그래밍 언어 </h4>
+                            <p>css 디자인에 동적 인터렉션과 기능 / 이벤트 요소를 사용한 애니메이션</p>
+                            <ul>
+                                <li>자바스크립트 기본</li>
+                                <li>연산자</li>
+                                <li>제어문</li>
+                                <li>DOM</li>
+                                <li>BOM</li>
+                                <li>함수</li>
+                                <li>이벤트</li>
+                                <li>이벤트 객체</li>
+                            </ul>
+                            <a href="#">더보기</a>
+                        </details>
                     </li>
                 </ul>
-            </section>
-            <section id="about">
-                <h2>about me</h2>
-                <div class="intro">
-                    <img src="img/me.png" alt="me" id="selfie">
-                    <div>
-                        <h3>hong Seung-Yeon</h3>
-                        <ul>
-                            <li>
-                                to infinity and beyond !
-                            </li>
-                            <li>
-                                무한한 가능성, <br>그리고 그 너머를 바라보는 웹 퍼블리셔 홍승연 입니다.
-                            </li>
-                        </ul>
-                        <p>배움과 도전을 즐기며 <br> 동시에 끊임없이 나아가는 저의 모습을 기대해주세요 !</p>
-                    </div>
-                    <button class="who">who am i?</button>
-                </div>
-
-                <details open>
-                    <summary class="screen_out">더보기</summary>
-                    <div class="small_details">
-                        <h4>i am ...</h4>
-                        <ul>
-                            <li><span>fundamental</span>
-                                <p>의미 없는 태그를 남발하는 편리함보다 시멘틱 태그를 사용하여 웹표준을 준수하는 기본에 충실한 퍼블리싱을 지향합니다.</p>
-                            <li><span>study</span>
-                                <p>모르는 것을 부끄러워하지 않고 지속적인 학습을 통해 전문성을 키워가고 있습니다. </p>
-                            </li>
-                            <li><span>team work</span>
-                                <p>공동체의 목표를 위해 타인의 의견에 귀를 기울이는 등, 팀원과 소통하고 협력하며 최선의 결과를 내기 위해 노력합니다.</p>
-                            </li>
-                            <li><span>diligent</span>
-                                <p>안되는 것도 될 때까지! <br> 모든 일에 끈기를 가지고 근면성실한 마인드로 임하고 있습니다.</p>
-                            </li>
-                            <li><span>calm</span>
-                                <p>앞서 겪었던 사회경험을 통해 다양한 돌발 상황을 침착한 마음가짐으로 대하며 최선의 결과물을 만들어냅니다.</p>
-                            </li>
-                            <li><span>optimistic</span>
-                                <p>긍정적인 태도와 마음가짐으로 문제 상황에서도 해결책을 찾아내 긍정적인 결과물을 만들어낼 수 있습니다.</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <button class="close">닫기</button>
-                </details>
-                <article class="spec">
-                    <div class="skill">
-                        <h3>skills</h3>
-                        <ul>
-                            <li>
-                                html/css <span><span>90%</span></span>
-                            </li>
-                            <li>
-                                js/jQuery <span><span>80%</span></span>
-                            </li>
-                            <li>
-                                photoshop <span><span>90%</span></span>
-                            </li>
-                            <li>
-                                illustrator <span><span>60%</span></span>
-                            </li>
-                            <li>
-                                premier pro <span><span>60%</span></span>
-                            </li>
-                            <li>
-                                after effect <span><span>80%</span></span>
-                            </li>
-                            <li>
-                                cinema 4D <span><span>70%</span></span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="cert_career">
-                        <div id="cert">
-                            <h3>Certifications</h3>
+            </article>
+        </section>
+        <section>
+            <h2>portfolio</h2>
+            <article>
+                <h3>web</h3>
+                <ul>
+                    <li><p>clone cording</p>
+                        <h4>selecto coffee homepage</h4>
+                        <img src="#" alt="셀렉토 커피 홈페이지">
+                        <a href="#">
+                          <h5>셀렉토 커피 홈페이지</h5> 
+                          <p>#개인_프로젝트 #HTML #CSS #JQUERY #반응형</p>
+                        </a>
+                    </li>
+                    <li><p>clone cording</p>
+                        <h4>hyundai green food homepage</h4>
+                        <img src="#" alt="현대 그린푸드 홈페이지">
+                        <a href="#">
+                          <h5>현대 그린푸드 홈페이지</h5> 
+                          <p>#개인_프로젝트 #HTML #CSS #JQUERY #반응형</p>
+                        </a>
+                    </li>
+                    <li><p>clone cording</p>
+                        <h4>samsung display newsroom homepage</h4>
+                        <img src="#" alt="삼성 디스플레이 뉴스룸 홈페이지">
+                        <a href="#">
+                          <h5>삼성 디스플레이 뉴스룸 홈페이지</h5> 
+                          <p>#개인_프로젝트 #HTML #CSS #JQUERY</p>
+                        </a>
+                    </li>
+                    <li><p>Design & Publishing</p>
+                        <h4>8th space / portfolio page</h4>
+                        <img src="#" alt="포트폴리오">
+                        <a href="#">
+                          <h5>8TH 포트폴리오 페이지</h5> 
+                          <p>#개인_프로젝트 #HTML #SCSS #javaScript #반응형</p>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <h3>design</h3>
+                <ul>
+                    <li>all</li>
+                    <li>2d</li>
+                    <li>3d</li>
+                    <li>video</li>
+                </ul>
+                <ul>
+                    <li class="2d">
+                        <p>hello2024</p>
+                        <img src="#" alt="hello2024">
+                        <details open>
+                            <summary>hello2024</summary>
+                            <img src="#" alt="motion_banner">
+                            <p>Hello_2024</p>
                             <ul>
-                                <li>
-                                    <p>2023 OPIC 영어 (IH) </p>
-                                </li>
-                                <li>
-                                    <p>2022 컴퓨터 활용 능력 1급 </p>
-                                </li>
-                                <li>
-                                    <p>2022 GTQ 1급 </p>
-                                </li>
+                                <li>#photo_shop</li>
+                                <li>#after_effect</li>
+                                <li>#개인작업</li>
+                                <li>#작업기간_1일</li>
                             </ul>
-                        </div>
-                        <div id="career">
-                            <h3>CAREER</h3>
-                            <ul>
-                                <li>
-                                    <p>2022. 11(4년) 어린이집 유아 보조 교사</p>
-                                    <ul class="keywords">
-                                        <li>교실간 소통</li>
-                                        <li>업무보조</li>
-                                        <li>안전관리</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <p>2018. 02(1년) 장애영유아를 위한 보육교사</p>
-                                    <ul class="keywords">
-                                        <li>특수교육</li>
-                                        <li>수업계획</li>
-                                        <li>학부모 상담</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <h4 class="screen_out">키워드</h4>
-                            <ul class="keywords total">
-                                <li>#협업</li>
-                                <li>#커뮤니케이션</li>
-                                <li>#서비스_마인드</li>
-                            </ul>
-                        </div>
-
-                    </div>
-                    <div id="history">
-                        <h3>HISTORY</h3>
+                        </details>
+                    </li>
+                </ul>
+                <li class="2d">
+                    <p>black_friday</p>
+                    <img src="#" alt="black_friday">
+                    <details open>
+                        <summary>black_friday</summary>
+                        <img src="#" alt="motion_banner">
+                        <p>black_friday</p>
                         <ul>
-                            <li>2023. 11 <p>나만의 포트폴리오 사이트를 구축</p>
-                            </li>
-                            <li>2023. 09 <p>인생 처음으로 웹 개발을 배우게 되었음</p>
-                            </li>
-                            <li>2023. 07 <p>포토샵을 비롯한 디자인 툴 배움</p>
-                            </li>
-                            <li>2023. 07 <p>한국 it 아카데미 멀티미디어 콘텐츠 과정 입학</p>
-                            </li>
+                            <li>#photo_shop</li>
+                            <li>#after_effect</li>
+                            <li>#개인작업</li>
+                            <li>#작업기간_1일</li>
                         </ul>
-                    </div>
-                </article>
-                <article id="study">
-                    <div class="blur">
-                        <div class="planet"></div>
-                    </div>
-                    <h2>study</h2>
-                    <ul class="study_list">
-                        <li><span>HTML</span>
-                            <details open>
-                                <summary class="screen_out">view more</summary>
-                                <button>닫기</button>
-                                <div class="small_details">
-                                    <h3>Hyper Text Markup Language</h3>
-                                    <p>웹표준을 고려하여 기본에 충실하고 의미있는 마크업</p>
-                                    <ul>
-                                        <li>html요소(태그)</li>
-                                        <li>form문 활용 검색창 생성</li>
-                                        <li>웹표준 마크업</li>
-                                    </ul>
-                                </div>
-                                <a href="http://8th.kr/html/tutorial/mark_up.html" target="_blank">더 보기</a>
-                            </details>
-                            <button class="more_bt">view more</button>
-                        </li>
-                        <li><span>CSS</span>
-                            <details open>
-                                <summary class="screen_out">view more</summary>
-                                <button>닫기</button>
-                                <div class="small_details">
-                                    <h3>Cascading Style Sheet</h3>
-                                    <p>디자인을 강조하는 애니메이션 / 사용환경을 고려한 반응형 웹 디자인</p>
-                                    <ul>
-                                        <li>css 주요 속성</li>
-                                        <li>가상클래스(가상요소)</li>
-                                        <li>웹폰트+폰트어썸</li>
-                                        <li>레이아웃</li>
-                                        <li>IR / IS 기법</li>
-                                        <li>구체성</li>
-                                        <li>트랜지션+트랜스폼</li>
-                                        <li>CSS 변수</li>
-                                        <li>3D</li>
-                                        <li>반응형 웹</li>
-                                    </ul>
-                                </div>
-                                <a href="http://8th.kr/html/tutorial/css.html" target="_blank">더 보기</a>
-                            </details>
-                            <button class="moreBt">view more</button>
-                        </li>
-
-                        <li><span>JS</span>
-                            <details open>
-                                <summary class="screen_out">view more</summary>
-                                <button>닫기</button>
-                                <div class="small_details">
-                                    <h3>객체 기반 스크립트 프로그래밍 언어</h3>
-                                    <p>css 디자인에 동적 인터렉션과 기능 / 이벤트 요소를 사용한 애니메이션</p>
-                                    <ul>
-                                        <li>자바 스크립트 기본</li>
-                                        <li>연산자</li>
-                                        <li>제어문</li>
-                                        <li>BOM</li>
-                                        <li>DOM</li>
-                                        <li>함수</li>
-                                        <li>이벤트</li>
-                                        <li>이벤트 객체</li>
-                                    </ul>
-                                </div>
-                                <a href="http://8th.kr/html/tutorial/js.html" target="_blank">더 보기</a>
-                            </details>
-                            <button class="more_bt">view more</button>
-                        </li>
-
-                        <li><span>J QUERY</span>
-                            <details open>
-                                <summary class="screen_out">view more</summary>
-                                <button>닫기</button>
-                                <div class="small_details">
-                                    <h3>오픈소스 자바스크립트 라이브러리</h3>
-                                    <p>J Query를 활용하여 JavaScript 기능을 편리하게 사용 가능</p>
-                                    <ul>
-                                        <li>JQuery 기본 메서드</li>
-                                        <li>이벤트와 애니메이션</li>
-                                        <li>풀화면 무한 슬라이드</li>
-                                        <li>카테고리 + 모달팝업</li>
-                                        <li>반응형 이미지 사이즈</li>
-                                        <li>반응형 메인메뉴</li>
-                                        <li>마우스에 반응하는 디자인</li>
-                                        <li>글자 타이핑 효과</li>
-                                        <li>랜덤 함수 활용 등</li>
-                                    </ul>
-                                </div>
-                                <a href="http://8th.kr/html/tutorial/jquery.html" target="_blank">더 보기</a>
-                            </details>
-                            <button class="more_bt">view more</button>
-                        </li>
-                    </ul>
-                </article>
-            </section>
-            <section id="port">
-                <h2 class="screen_out">portfolio</h2>
-                <article id="web">
-                    <h3>web</h3>
-                    <div class="center">
+                    </details>
+                </li>
+                <li class="2d">
+                    <p>cyber_monday</p>
+                    <img src="#" alt="cyber_monday">
+                    <details open>
+                        <summary>cyber_monday</summary>
+                        <img src="#" alt="motion_banner">
+                        <p>cyber_monday</p>
                         <ul>
-                            <li class="big">
-                                <p>clone cording</p>
-                                <h4>HYUNDAI GREEN FOOD homapage</h4>
-                                <a target="_blank" href="http://8th.kr/%ed%98%84%eb%8c%80%ea%b7%b8%eb%a6%b0%ed%91%b8%eb%93%9c/%ed%98%84%eb%8c%80%ea%b7%b8%eb%a6%b0%ed%91%b8%eb%93%9c.html"><img src="img/uiux_pt/현대그린푸드_홈페이지.png" alt="현대그린푸드홈페이지">
-                                    <span class="wrap">
-                                        <span class="title">현대그린푸드 홈페이지</span>
-                                        <span class="content">
-                                            #개인_프로젝트 #작업시간_3일 #html #css #javaScript #jquery #반응형
-                                        </span>
-                                        <span class="go">view more</span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <p>clone cording</p>
-                                <h4>selecto coffee homapage</h4>
-                                <a target="_blank" href="http://8th.kr/team/"><img src="img/uiux_pt/셀렉토커피홈페이지.png" alt="셀렉토커피홈페이지">
-                                    <span class="wrap">
-                                        <span class="title">셀렉토 커피 홈페이지</span>
-                                        <span class="content">
-                                            #개인_프로젝트 #작업시간_5일 #html #css #javaScript #jquery #반응형
-                                        </span>
-                                        <span class="go">view more</span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <p>clone cording</p>
-                                <h4>samsung display newsroom homapage</h4>
-                                <a target="_blank" href="http://8th.kr/%ec%82%bc%ec%84%b1%eb%94%94%ec%8a%a4%ed%94%8c%eb%a0%88%ec%9d%b4%eb%89%b4%ec%8a%a4%eb%a3%b8/%ec%82%bc%ec%84%b1%eb%94%94%ec%8a%a4%ed%94%8c%eb%a0%88%ec%9d%b4%eb%89%b4%ec%8a%a4%eb%a3%b8.html"><img src="img/uiux_pt/삼성디스플레이뉴스룸.png" alt="삼성디스플레이뉴스룸 홈페이지">
-                                    <span class="wrap">
-                                        <span class="title">삼성디스플레이 뉴스룸 페이지(PC only)</span>
-                                        <span class="content">
-                                            #개인_프로젝트 #작업시간_3일 #html #css #javaScript #jquery #반응형(진행중)
-                                        </span>
-                                        <span class="go">view more</span>
-                                    </span>
-                                </a>
-                            </li>
-                            
-                            <li>
-                                <p>clone cording</p>
-                                <h4>h.point homapage</h4>
-                                <a target="_blank" href="http://8th.kr/hpoint/hpoint.html"><img src="img/uiux_pt/hpoint홈페이지.png" alt="h.point홈페이지">
-                                    <span class="wrap">
-                                        <span class="title">h.point 홈페이지 (작업중)</span>
-                                        <span class="content">#개인_프로젝트 #html #css #javaScript #jquery(진행중)</span>
-                                        <span class="go">view more</span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <p>clone cording</p>
-                                <h4>vibey homapage</h4>
-                                <a target="_blank" href="http://8th.kr/%eb%b0%94%ec%9d%b4%eb%b9%84/%eb%b0%94%ec%9d%b4%eb%b9%84.html"><img src="img/uiux_pt/바이비홈페이지.png" alt="바이비 홈페이지">
-                                    <span class="wrap">
-                                        <span class="title">바이비 홈페이지 (작업중)</span>
-                                        <span class="content">#개인_프로젝트 #html #css #javaScript #jquery(진행중)</span>
-                                        <span class="go">view more</span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <p>design & publishing</p>
-                                <h4>8th space / portfolio page</h4>
-                                <a target="_blank" href="http://8th.kr/"><img src="img/uiux_pt/8th포트폴리오페이지.png" alt="개인포트폴리오페이지">
-                                    <span class="wrap">
-                                        <span class="title">8th 포트폴리오 페이지</span>
-                                        <span class="content">#개인_프로젝트 #html #css #javaScript #jquery #반응형</span>
-                                        <span class="go">view more</span>
-                                    </span>
-                                </a>
-                            </li>
+                            <li>#photo_shop</li>
+                            <li>#after_effect</li>
+                            <li>#개인작업</li>
+                            <li>#작업기간_1일</li>
                         </ul>
-                    </div>
-                    <div class="pagenation">
-                    </div>
-                    <button>이전</button>
-                    <button>다음</button>
-                </article>
-                <article id="design">
-                    <h3>design</h3>
-                    <ul class="cate">
-                        <li><button>All</button></li>
-                        <li><button>2D</button></li>
-                        <li><button>3D</button></li>
-                        <li><button>VIDEO</button></li>
-                    </ul>
-                    <div class="blur"></div>
-                    <ul class="list">
-                        <li class="2d">
-                            <p class="hover">hello2024</p>
-                            <img src="img/design_pt/hello2024.png" alt="salecode">
-                            <details open>
-                                <summary class="screen_out">더보기</summary>
-                                <div class="portfolio_detail">
-                                    <img src="img/design_pt/hello2024.gif" alt="motion_banner">
-                                    <p>Hello_2024</p>
-                                    <ul>
-                                        <li>#PhotoShop</li>
-                                        <li>#AffterEffect</li>
-                                        <li>#개인작업</li>
-                                        <li>#작업기간_1일</li>
-                                    </ul>
-                                </div>
-                            </details>
-                        </li>
-                        <li class="2d">
-                            <p class="hover">black_friday</p>
-                            <img src="img/design_pt/black_friday.png" alt="black_friday">
-                            <details open>
-                                <summary class="screen_out">더보기</summary>
-                                <div class="portfolio_detail">
-                                    <img src="img/design_pt/black_friday.gif" alt="motion_banner">
-                                    <p>black friday</p>
-                                    <ul>
-                                        <li>#PhotoShop</li>
-                                        <li>#AffterEffect</li>
-                                        <li>#개인작업</li>
-                                        <li>#작업기간_1일</li>
-                                    </ul>
-                                </div>
-                            </details>
-                        </li>
-                        <li class="2d">
-                            <p class="hover">cyber_monday</p>
-                            <img src="img/design_pt/cybermonday.png" alt="cyber_monday">
-                            <details open>
-                                <summary class="screen_out">더보기</summary>
-                                <div class="portfolio_detail">
-                                    <video controls="">
-                                        <source src="img/design_pt/cyberMonday.mp4" type="video/mp4">Your browser does
-                                        not support the video tag.
-                                    </video>
-                                    <p>cyber_monday</p>
-                                    <ul>
-                                        <li>#PhotoShop</li>
-                                        <li>#AffterEffect</li>
-                                        <li>#개인작업</li>
-                                        <li>#작업기간_1일</li>
-                                    </ul>
-                                </div>
-                            </details>
-                        </li>
-                        <li class="2d">
-                            <p class="hover">jackPot</p>
-                            <img src="img/design_pt/jackpot.png" alt="jackPot">
-                            <details open>
-                                <summary class="screen_out">더보기</summary>
-                                <div class="portfolio_detail">
-                                    <video controls="">
-                                        <source src="img/design_pt/jackpot.mp4" type="video/mp4">Your browser does
-                                        not support the video tag.
-                                    </video>
-                                    <p>jackPot</p>
-                                    <ul>
-                                        <li>#PhotoShop</li>
-                                        <li>#AffterEffect</li>
-                                        <li>#개인작업</li>
-                                        <li>#작업기간_1일</li>
-                                    </ul>
-                                </div>
-                            </details>
-                        </li>
-                        <li class="2d">
-                            <p class="hover">time_sale</p>
-                            <img src="img/design_pt/timesale.png" alt="time_sale">
-                            <details open>
-                                <summary class="screen_out">더보기</summary>
-                                <div class="portfolio_detail">
-                                    <video controls="">
-                                        <source src="img/design_pt/time_sale.mp4" type="video/mp4">Your browser does
-                                        not support the video tag.
-                                    </video>
-                                    <p>time sale</p>
-                                    <ul>
-                                        <li>#PhotoShop</li>
-                                        <li>#AffterEffect</li>
-                                        <li>#개인작업</li>
-                                        <li>#작업기간_1일</li>
-                                    </ul>
-                                </div>
-                            </details>
-                        </li>
-                        <li class="video">
-                            <p class="hover">nexen_tire</p>
-                            <img src="img/design_pt/nexentire0.jpg" alt="nexen_tire">
-                            <details open>
-                                <summary class="screen_out">더보기</summary>
-                                <div class="portfolio_detail">
-                                    <video controls="">
-                                        <source src="img/design_pt/홍승연_영상CG작업.mp4" type="video/mp4">Your browser does
-                                        not support the video tag.
-                                    </video>
-                                    <p>nexen tire</p>
-                                    <ul>
-                                        <li>#PhotoShop</li>
-                                        <li>#AffterEffect</li>
-                                        <li>#개인작업</li>
-                                        <li>#작업기간_7일</li>
-                                    </ul>
-                                </div>
-                            </details>
-                        </li>
-                        <li class="video">
-                            <p class="hover">title design</p>
-                            <img src="img/design_pt/특수영상합성.png" alt="cat's_privacy">
-                            <details open>
-                                <summary class="screen_out">더보기</summary>
-                                <div class="portfolio_detail">
-                                    <video controls="">
-                                        <source src="img/design_pt/홍승연_특수영상합성.mp4" type="video/mp4">Your browser does
-                                        not support the video tag.
-                                    </video>
-                                    <p>title design</p>
-                                    <ul>
-                                        <li>#PhotoShop</li>
-                                        <li>#AffterEffect</li>
-                                        <li>#개인작업</li>
-                                        <li>#작업기간_7일</li>
-                                    </ul>
-                                </div>
-                            </details>
-                        </li>
-                        <li class="3d vedio">
-                            <p class="hover">age_notice</p>
-                            <img src="img/design_pt/홍승연_3D_그래픽_제작2.png" alt="연령고지">
-                            <details open>
-                                <summary class="screen_out">더보기</summary>
-                                <div class="portfolio_detail">
-                                    <video controls="">
-                                        <source src="img/design_pt/연령고지_12세.mp4" type="video/mp4">Your browser does
-                                        not support the video tag.
-                                    </video> alt="video">
-                                    <p>age notice</p>
-                                    <ul>
-                                        <li>#Cinema4D</li>
-                                        <li>#개인작업</li>
-                                        <li>#작업기간_7일</li>
-                                    </ul>
-                                </div>
-                            </details>
-                        </li>
-                        <li class="3d">
-                            <p class="hover">flag</p>
-                            <img src="img/design_pt/태극기0069.png" alt="flag">
-                            <details open>
-                                <summary class="screen_out">더보기</summary>
-                                <div class="portfolio_detail">
-                                    <img src="img/design_pt/태극기.gif" alt="flag">
-                                    <p>flag</p>
-                                    <ul>
-                                        <li>#Cinema4D</li>
-                                        <li>#개인작업</li>
-                                        <li>#작업기간_1일</li>
-                                    </ul>
-                                </div>
-                            </details>
-                        </li>
-                        <li class="3d">
-                            <p class="hover">mushroom_village</p>
-                            <img src="img/design_pt/버섯마을0031.png" alt="mushroom_village">
-                            <details open>
-                                <summary class="screen_out">더보기</summary>
-                                <div class="portfolio_detail">
-                                    <img src="img/design_pt/버섯마을.gif" alt="mushroom_village">
-                                    <p>mushroom_village</p>
-                                    <ul>
-                                        <li>#PhotoShop</li>
-                                        <li>#AffterEffect</li>
-                                        <li>#개인작업</li>
-                                        <li>#작업기간_1일</li>
-                                    </ul>
-                                </div>
-                            </details>
-                        </li>
-                        <li class="2d">
-                            <p class="hover">baby</p>
-                            <img src="img/design_pt/홍승연_콜라주.png" alt="baby_and_flower">
-                            <details open>
-                                <summary class="screen_out">더보기</summary>
-                                <div class="portfolio_detail">
-                                    <img src="img/design_pt/홍승연_콜라주.png" alt="baby_and_flower">
-                                    <p>baby_and_flower</p>
-                                    <ul>
-                                        <li>#PhotoShop</li>
-                                        <li>#개인작업</li>
-                                        <li>#작업기간_1일</li>
-                                    </ul>
-                                </div>
-                            </details>
-                        </li>
-                        <li class="3d">
-                            <p class="hover">tree</p>
-                            <img src="img/design_pt/tree0050.png" alt="christmas_tree">
-                            <details open>
-                                <summary class="screen_out">더보기</summary>
-                                <div class="portfolio_detail">
-                                    <img src="img/design_pt/tree.gif" alt="christmas_tree">
-                                    <p>tree</p>
-                                    <ul>
-                                        <li>#cinema 4d</li>
-                                        <li>#개인작업</li>
-                                        <li>#작업기간_1일</li>
-                                    </ul>
-                                </div>
-                            </details>
-                        </li>
-                        <li class="2d">
-                            <p class="hover">my day</p>
-                            <img src="img/design_pt/승연이의_하루.png" alt="my_day">
-                            <details open>
-                                <summary class="screen_out">더보기</summary>
-                                <div class="portfolio_detail">
-                                    <video controls="">
-                                        <source src="img/design_pt/승연이의_별일없는_하루.mp4" type="video/mp4">Your browser does
-                                        not support the video tag.
-                                    </video>
-                                    <p>my day</p>
-                                    <ul>
-                                        <li>#Photoshop</li>
-                                        <li>#AfterEffect</li>
-                                        <li>#개인작업</li>
-                                        <li>#작업기간_1일</li>
-                                    </ul>
-                                </div>
-                            </details>
-                        </li>
-                        <li class="2d">
-                            <p class="hover">smile_donut</p>
-                            <img src="img/design_pt/스마일도넛.png" alt="smile_donut">
-                            <details open>
-                                <summary class="screen_out">더보기</summary>
-                                <div class="portfolio_detail">
-                                    <img src="img/design_pt/스마일도넛.png" alt="smile_donut">
-                                    <p>smile_donut</p>
-                                    <ul>
-                                        <li>#illustrator</li>
-                                        <li>#개인작업</li>
-                                        <li>#작업기간_1일</li>
-                                    </ul>
-                                </div>
-                            </details>
-                        </li>
-                    </ul>
-                </article>
-            </section>
-            <section id="contact">
-                <h2>contact</h2>
-                <div class="wrap">
-                    <p>저에게 하고 싶은 <br>이야기가 있으신가요? <span>메시지를 남겨주시면 빠른 시일 내 답변 도와드릴게요 ! <br> 언제든 연락해주세요 :)</span></p>
-                    <h3 class="screen_out">다른 연락방법</h3>
-                    <ul>
-                        <li><span>카카오톡</span> : hongssi08</li>
-                        <li><span>이메일</span> : admin@8th.kr </li>
-                    </ul>
-                    <form action="#" id="form">
-                        <fieldset>
-                            <legend class="screen_out">leave message</legend>
-                            <input type="text" name="user_name" id="name" autocomplete="off"><label
-                                for="name">Name</label>
-                            <input type="text" name="reply" id="reply" autocomplete="off"><label for="reply"> Number or
-                                E-mail</label>
-                            <textarea name="message" id="m" cols="30" rows="10"></textarea><label
-                                for="m">Message</label>
-                            <button type="submit" id="submit">SUBMIT</button>
-                        </fieldset>
-                    </form>
-                </div>
-            </section>
-        </div>
-        <button id="totop">totop</button>
+                    </details>
+                </li>
+                <li class="2d">
+                    <p>jackpot</p>
+                    <img src="#" alt="jackpot">
+                    <details open>
+                        <summary>jackpot</summary>
+                        <img src="#" alt="motion_banner">
+                        <p>jackpot</p>
+                        <ul>
+                            <li>#photo_shop</li>
+                            <li>#after_effect</li>
+                            <li>#개인작업</li>
+                            <li>#작업기간_1일</li>
+                        </ul>
+                    </details>
+                </li>
+                <li class="2d">
+                    <p>time_sale</p>
+                    <img src="#" alt="time_sale">
+                    <details open>
+                        <summary>time_sale</summary>
+                        <img src="#" alt="motion_banner">
+                        <p>time_sale</p>
+                        <ul>
+                            <li>#photo_shop</li>
+                            <li>#after_effect</li>
+                            <li>#개인작업</li>
+                            <li>#작업기간_1일</li>
+                        </ul>
+                    </details>
+                </li>
+                <li class="2d">
+                    <p>cyber_monday</p>
+                    <img src="#" alt="cyber_monday">
+                    <details open>
+                        <summary>cyber_monday</summary>
+                        <img src="#" alt="motion_banner">
+                        <p>black_friday</p>
+                        <ul>
+                            <li>#photo_shop</li>
+                            <li>#after_effect</li>
+                            <li>#개인작업</li>
+                            <li>#작업기간_1일</li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+            </article>
+        </section>
     </main>
     <footer>
-        <h2>카피라이트 및 저작권</h2>
-        <address>&copy; 8th all rights reserved.</address>
-        <p>FREEPIK에 있는 CATALYSTSTUFF의 이미지를 사용하였습니다.</p>
+
     </footer>
 </body>
-
 </html>
