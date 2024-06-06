@@ -15,37 +15,56 @@
 }
 
 header {
-  border: 1px solid red;
   background-color: black;
   padding: 0 40px;
 }
 header h1 {
   display: block;
-  width: 100px;
-  height: 80px;
   text-indent: -9999px;
   overflow: hidden;
+  width: 100px;
+  height: 80px;
   background: url(/8th_logo_white.9ff37284.png) center/60px 50px no-repeat;
 }
 header nav {
   width: 100%;
   max-width: 1600px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  justify-content: space-between;
   margin: auto;
 }
 header ul {
   display: flex;
+  width: fit-content;
+  justify-content: right;
+}
+header a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: aliceblue;
+  border-radius: 50%;
+  transition: 0.2s ease-in;
+}
+header li {
+  padding: 1em 2em;
+}
+header li:hover a::after {
   width: 100%;
-  justify-content: space-around;
 }
 header a {
+  position: relative;
   color: aliceblue;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 24px;
   font-family: "chosunSg";
+  width: fit-content;
 }
 
 /*# sourceMappingURL=/main.39afc03c.css.map */
