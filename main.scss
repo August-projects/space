@@ -1,3 +1,60 @@
+@font-face {
+    font-family: 'ChosunSg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunSg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$title: 'chosunKg';
+$content: 'chosunSg';
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.screen_out {
+    display: none;
+}
+
 header {
     border: 1px solid red;
+    background-color: black;
+    padding: 0 40px;
+
+    h1 {
+        display: block;
+        width: 100px;
+        height: 80px;
+        text-indent: -9999px;
+        overflow: hidden;
+        background: url(./img/8th_logo_white.png) center / 60px 50px no-repeat;
+    }
+
+    nav {
+        width: 100%;
+        max-width: 1600px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+    }
+
+    ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+
+    }
+
+    a {
+        color: aliceblue;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-family: $content;
+    }
+
+
 }
