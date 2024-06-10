@@ -14,6 +14,7 @@
   display: none;
 }
 
+/*header*/
 header {
   background-color: black;
   padding: 0 40px;
@@ -29,10 +30,10 @@ header h1 {
 header nav {
   width: 100%;
   max-width: 1600px;
+  margin: auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   margin: auto;
 }
 header ul {
@@ -62,9 +63,34 @@ header a {
   color: aliceblue;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 16px;
   font-family: "chosunSg";
   width: fit-content;
+}
+
+main {
+  background-color: black;
+  background-image: url(/stars.def937ea.png);
+}
+main .slogan {
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+  height: 100vh;
+}
+main .slogan .planet {
+  border: 1px solid red;
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+main .slogan ul:nth-child(3) li {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 18px;
+  font-family: "chosunSg";
+  line-height: 110%;
 }
 
 /*# sourceMappingURL=/main.39afc03c.css.map */
