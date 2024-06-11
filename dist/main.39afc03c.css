@@ -4,6 +4,34 @@
   font-weight: normal;
   font-style: normal;
 }
+@keyframes updown {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -78,19 +106,39 @@ main .slogan {
   margin: auto;
   height: 100vh;
 }
-main .slogan .planet {
-  border: 1px solid red;
-  display: block;
-  text-indent: -9999px;
-  overflow: hidden;
+main .slogan .orbit {
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  animation: updown 3s linear infinite;
 }
 main .slogan ul:nth-child(3) li {
   color: white;
   text-transform: uppercase;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.5em;
   font-family: "chosunSg";
-  line-height: 110%;
+  cursor: default;
+  line-height: 120%;
+}
+main .slogan > p {
+  position: relative;
+  color: grey;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2em;
+  animation: opacity 3s ease-in infinite;
+}
+main .slogan > p::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-bottom: 1px solid grey;
+  border-left: 1px solid grey;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 110%) rotate(-45deg);
 }
 
 /*# sourceMappingURL=/main.39afc03c.css.map */
