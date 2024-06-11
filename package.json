@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "@lottiefiles/lottie-interactivity": "^1.6.2",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "swiper": "^11.1.4"
   },
   "description": ""
 }

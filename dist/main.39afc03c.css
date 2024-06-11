@@ -42,7 +42,6 @@
   display: none;
 }
 
-/*header*/
 header {
   background-color: black;
   padding: 0 40px;
@@ -101,10 +100,10 @@ main {
   background-image: url(/stars.def937ea.png);
 }
 main .slogan {
+  height: 100vh;
   width: 100%;
   max-width: 1600px;
   margin: auto;
-  height: 100vh;
 }
 main .slogan .orbit {
   width: 600px;
@@ -124,21 +123,303 @@ main .slogan ul:nth-child(3) li {
 main .slogan > p {
   position: relative;
   color: grey;
-  text-align: center;
-  text-transform: uppercase;
   margin: 2em;
   animation: opacity 3s ease-in infinite;
+  text-align: center;
+  text-transform: uppercase;
 }
 main .slogan > p::after {
   content: "";
   position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 110%) rotate(-45deg);
   width: 15px;
   height: 15px;
   border-bottom: 1px solid grey;
   border-left: 1px solid grey;
-  bottom: 0px;
+}
+main .about {
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+}
+main .about h2 {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  margin: 2em;
+  letter-spacing: 0.4px;
+  font-family: "chosunSg";
+  font-size: 28px;
+  font-weight: bold;
+}
+main .about article:nth-of-type(1) {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .about article:nth-of-type(1) img {
+  width: 100%;
+  max-width: 600px;
+}
+main .about article:nth-of-type(1) div {
+  position: relative;
+  transform: translateY(50%);
+  line-height: 150%;
+  color: white;
+}
+main .about article:nth-of-type(1) div h3 {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  font-family: "chosunSg";
+  font-size: 20px;
+  font-weight: bold;
+}
+main .about article:nth-of-type(1) div ul {
+  margin-top: 5%;
+  line-height: 130%;
+  word-break: keep-all;
+  color: white;
+}
+main .about article:nth-of-type(1) div ul p {
+  font-family: "chosunSg";
+  font-size: 16px;
+  color: white;
+}
+main .about article:nth-of-type(1) div button {
+  padding: 5px 10px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 2px;
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  left: 0;
+  bottom: -30%;
+  opacity: 0.4;
+}
+main .about article:nth-of-type(1) div button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+main .about article:nth-of-type(1) + details {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: none;
+}
+main .about article:nth-of-type(1) + details ul {
+  display: grid;
+  margin-top: 2em;
+  grid-template-columns: repeat(8, 1fr);
+}
+main .about article:nth-of-type(1) + details ul li {
+  color: white;
+  height: 160px;
+  background: url(/html5.36937c36.svg) center/50% no-repeat;
+  position: relative;
+}
+main .about article:nth-of-type(1) + details ul li span {
+  text-transform: uppercase;
+  position: absolute;
   left: 50%;
-  transform: translate(-50%, 110%) rotate(-45deg);
+  bottom: 5%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+}
+main .about article:nth-of-type(1) + details ul li.css {
+  background-image: url(/css.e09bd51d.svg);
+}
+main .about article:nth-of-type(1) + details ul li.js {
+  background-image: url(/square-js.933fb668.svg);
+}
+main .about article:nth-of-type(1) + details ul li.jquery {
+  background-image: url(/jquery.3933eb9a.svg);
+}
+main .about article:nth-of-type(1) + details ul li.github {
+  background-image: url(/github.8994e164.png);
+}
+main .about article:nth-of-type(1) + details ul li.scss {
+  background-image: url(/sass.e4fb3350.png);
+}
+main .about article:nth-of-type(1) + details ul li.figma {
+  background-image: url(/figma.800b7fda.png);
+}
+main .about article:nth-of-type(1) + details ul li.photoshop {
+  background-image: url(/photoshop.c4d05bd7.png);
+}
+main .about article:nth-of-type(1) + details ul li.illur {
+  background-image: url(/illustrator.3f5fced6.png);
+}
+main .about article:nth-of-type(1) + details ul li.premier {
+  background-image: url(/premiere-pro.dca62347.png);
+}
+main .about article:nth-of-type(1) + details ul li.affect {
+  background-image: url(/after-effects.0f4bac9e.png);
+}
+main .about article:nth-of-type(1) + details.on {
+  display: block;
+}
+main .about .study h3 {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  margin: 2em;
+  letter-spacing: 0.4px;
+  font-family: "chosunSg";
+  font-size: 24px;
+  font-weight: bold;
+}
+main .about .study > ul {
+  display: flex;
+  gap: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid 0;
+}
+main .about .study > ul .container {
+  position: relative;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 300px;
+  height: 360px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+main .about .study > ul .container:hover .card {
+  transform: rotateY(180deg);
+}
+main .about .study > ul .container .card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+main .about .study > ul .container .card .front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid white;
+  box-sizing: border-box;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  color: white;
+  background: url(/html5.36937c36.svg) center/50% no-repeat;
+}
+main .about .study > ul .container .card .front.css {
+  background-image: url(/css.e09bd51d.svg);
+}
+main .about .study > ul .container .card .front.vanila {
+  background-image: url(/square-js.933fb668.svg);
+}
+main .about .study > ul .container .card .front.jquery {
+  background-image: url(/jquery.3933eb9a.svg);
+}
+main .about .study > ul .container .card .front span {
+  font-family: "chosunSg";
+  font-size: 20px;
+  font-weight: light;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -100%);
+}
+main .about .study > ul .container .card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  border-radius: 12px;
+  border: 2px solid white;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+main .about .study > ul .container .card .back h4 {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  font-family: "chosunKg";
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 0;
+  position: relative;
+  word-break: keep-all;
+}
+main .about .study > ul .container .card .back h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+main .about .study > ul .container .card .back h4 + p {
+  font-family: "chosunSg";
+  font-size: 12px;
+  font-weight: light;
+  color: white;
+  margin: 0 0 28px;
+  text-align: center;
+  line-height: 130%;
+  word-break: keep-all;
+}
+main .about .study > ul .container .card .back ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5px;
+}
+main .about .study > ul .container .card .back ul li {
+  font-family: "chosunSg";
+  font-size: 14px;
+  color: white;
+  transform: translateX(4%);
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  word-break: keep-all;
+  line-height: 120%;
+}
+main .about .study > ul .container .card .back a {
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  font-family: "chosunSg";
+  font-size: 14px;
+  font-weight: light;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  opacity: 0.3;
+}
+main .about .study > ul .container .card .back a:hover {
+  opacity: 1;
+}
+main .about .study > ul .container span {
+  color: white;
+  text-transform: uppercase;
+}
+main .back-drop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  opacity: 0.3;
+  z-index: 0;
+  display: none;
+}
+main .back-drop.on {
+  display: block;
 }
 
 /*# sourceMappingURL=/main.39afc03c.css.map */

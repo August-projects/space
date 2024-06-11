@@ -25,7 +25,6 @@
 
 <body>
     <header>
-
         <nav>
             <h1><a href="#">홍승연의 포트폴리오 입니다</a></h1>
             <ul>
@@ -38,8 +37,9 @@
     </header>
     <main>
         <section class="slogan">
-            <h2 class = "screen_out">slogan</h2>
-            <lottie-player id="firstLottie" class="orbit" src="https://lottie.host/3d19d076-a888-40f5-b4ae-fdc9235c6777/WizNzXov1R.json" autoplay loop>
+            <h2 class="screen_out">slogan</h2>
+            <lottie-player id="firstLottie" class="orbit"
+                src="https://lottie.host/3d19d076-a888-40f5-b4ae-fdc9235c6777/WizNzXov1R.json" autoplay loop>
             </lottie-player>
             <ul>
                 <li>To infinity and beyond !</li>
@@ -47,38 +47,135 @@
             </ul>
             <p>scroll down</p>
         </section>
-        <section>
+        <section class="about">
             <h2>About Me</h2>
-            <img src="./img/me.png" alt="me">
-            <h3>Hong Seung - Yeon</h3>
-            <ul>
-                <li>
-                    <p>안녕하세요!</p>
-                </li>
-                <li>
-                    <p>웹퍼블리셔 <strong>홍승연</strong>입니다.</p>
-                </li>
-                <li>
-                    <p>현재에 안주하지 않고 무한히 발전하고자 하는 마음가짐으로 노력하겠습니다.</p>
-                </li>
-                <li>
-                    <p>배움과 도전을 즐기며 동시에 끊임없이 나아가는 저의 모습을 기대해주세요 !</p>
-                </li>
-            </ul>
-            <h3>skills</h3>
-            <ul>
-                <li>html</li>
-                <li>css</li>
-                <li>scss</li>
-                <li>js</li>
-                <li>jquery</li>
-                <li>git</li>
-                <li>figma</li>
-                <li>photoshop</li>
-                <li>illurstrator</li>
-                <li>premier pro</li>
-                <li>affter effect</li>
-            </ul>
+            <article>
+                <img src="./img/me.png" alt="me">
+                <div>
+                    <h3>Hong Seung - Yeon</h3>
+                    <ul>
+                        <li>
+                            <p>안녕하세요!</p>
+                        </li>
+                        <li>
+                            <p>웹퍼블리셔 <strong>홍승연</strong>입니다.</p>
+                        </li>
+                        <li>
+                            <p>현재에 안주하지 않고 무한히 발전하고자 하는 마음가짐으로 노력하겠습니다.</p>
+                        </li>
+                        <li>
+                            <p>배움과 도전을 즐기며 동시에 끊임없이 나아가는 저의 모습을 기대해주세요 !</p>
+                        </li>
+                    </ul>
+                    <button>skills</button>
+                </div>
+            </article>
+
+            <details open>
+                <summary class="screen_out">skills</summary>
+                <h4 class="screen_out">skills</h4>
+                <ul>
+                    <li class="html"><span>html</span></li>
+                    <li class="css"><span>css</span></li>
+                    <li class="js"><span>js</span></li>
+                    <li class="jquery"><span>jquery</span></li>
+                    <li class="github"><span>git hub</span></li>
+                    <li class="scss"><span>scss</span></li>
+                    <li class="figma"><span>figma</span></li>
+                    <li class="photoshop"><span>photoshop</span></li>
+                    <li class="illur"><span>illurstrator</span></li>
+                    <li class="premier"><span>premier pro</span></li>
+                    <li class="affect"><span>affter effect</span></li>
+                </ul>
+            </details>
+            <article class="study">
+                <h3>study</h3>
+                    <ul>
+                        <li class="container">
+                            <div class="card">
+                                <div class="front html"><span>html</span></div>
+                                <details open class="back">
+                                    <summary class="screen_out">html study</summary>
+                                    <h4>hyper text markup language</h4>
+                                    <p>웹 표준을 고려하여 기본에 충실하고 의미있는 마크업</p>
+                                    <ul>
+                                        <li>html요소(태그)</li>
+                                        <li>웹 표준 마크업</li>
+                                        <li>form문 활용 검색창 생성</li>
+                                    </ul>
+                                    <a href="#">더보기</a>
+                                </details>
+                            </div>
+                        </li>
+                        <li class="container">
+                            <div class="card">
+                                <div class="front css"><span>css</span></div>
+                                <details open class="back">
+                                    <summary class="screen_out">css study</summary>
+                                    <h4>CASCADING STYLE SHEET</h4>
+                                    <p>디자인을 강조하는 애니메이션 <br> 사용환경을 고려한 반응형 웹 디자인</p>
+                                    <ul>
+                                        <li>css 주요 속성</li>
+                                        <li>가상클래스(가상요소)</li>
+                                        <li>웹폰트+폰트어썸</li>
+                                        <li>레이아웃</li>
+                                        <li>IR / IS 기법</li>
+                                        <li>구체성</li>
+                                        <li>트랜지션+트랜스폼</li>
+                                        <li>CSS 변수</li>
+                                        <li>3D</li>
+                                        <li>반응형 웹</li>
+                                        <li>SCSS</li>
+                                    </ul>
+                                    <a href="#">더보기</a>
+                                </details>
+                            </div>
+                        </li>
+                        <li class="container">
+                            <div class="card">
+                                <div class="front vanila"><span>java script</span></div>
+                                <details open class="back">
+                                    <summary class="screen_out">css study</summary>
+                                    <h4>객체 기반 스크립트 프로그래밍 언어 </h4>
+                                    <p>css 디자인에 동적 인터렉션과 기능과 <br> 이벤트 요소를 사용한 애니메이션</p>
+                                    <ul>
+                                        <li>자바스크립트 기본</li>
+                                        <li>연산자</li>
+                                        <li>제어문</li>
+                                        <li>DOM</li>
+                                        <li>BOM</li>
+                                        <li>함수</li>
+                                        <li>이벤트</li>
+                                        <li>이벤트 객체</li>
+                                    </ul>
+                                    <a href="#">더보기</a>
+                                </details>
+                            </div>
+                        </li>
+                        <li class="container">
+                            <div class="card">
+                                <div class="front jquery"><span>j query</span></div>
+                                <details open class="back">>
+                                    <summary class="screen_out">css study</summary>
+                                    <h4>객체 기반 스크립트 프로그래밍 언어 </h4>
+                                    <p>J Query를 활용하여 Java Script 기능을 편리하게 사용 가능</p>
+                                    <ul>
+                                        <li>JQuery 기본 메서드</li>
+                                        <li>이벤트와 애니메이션</li>
+                                        <li>풀화면 무한 슬라이드</li>
+                                        <li>카테고리 + 모달팝업</li>
+                                        <li>반응형 이미지 사이즈</li>
+                                        <li>반응형 메인메뉴</li>
+                                        <li>마우스에 반응하는 디자인</li>
+                                        <li>글자 타이핑 효과</li>
+                                        <li>랜덤 함수 활용 등</li>
+                                    </ul>
+                                    <a href="#">더보기</a>
+                                </details>
+                            </div>
+                        </li>
+                    </ul>
+            </article>
             <article>
                 <h3>what i am good at</h3>
                 <ul>
@@ -108,85 +205,7 @@
                     </li>
                 </ul>
             </article>
-            <article>
-                <h3>study</h3>
-                <ul>
-                    <li>
-                        <span>html</span>
-                        <details>
-                            <summary class="screen_out">html study</summary>
-                            <h4>hyper text markup language</h4>
-                            <p>웹 표준을 고려하여 기본에 충실하고 의미있는 마크업</p>
-                            <ul>
-                                <li>html요소(태그)</li>
-                                <li>웹 표준 마크업</li>
-                                <li>form문 활용 검색창 생성</li>
-                            </ul>
-                            <a href="#">더보기</a>
-                        </details>
-                        <button>view more</button>
-                    </li>
-                    <li><span>css</span>
-                        <details>
-                            <summary class="screen_out">css study</summary>
-                            <h4>CASCADING STYLE SHEET</h4>
-                            <p>디자인을 강조하는 애니메이션 / 사용환경을 고려한 반응형 웹 디자인</p>
-                            <ul>
-                                <li>css 주요 속성</li>
-                                <li>가상클래스(가상요소)</li>
-                                <li>웹폰트+폰트어썸</li>
-                                <li>레이아웃</li>
-                                <li>IR / IS 기법</li>
-                                <li>구체성</li>
-                                <li>트랜지션+트랜스폼</li>
-                                <li>CSS 변수</li>
-                                <li>3D</li>
-                                <li>반응형 웹</li>
-                                <li>SCSS</li>
-                            </ul>
-                            <a href="#">더보기</a>
-                        </details>
-                        <button>view more</button>
-                    </li>
-                    <li><span>java script</span>
-                        <details>
-                            <summary class="screen_out">css study</summary>
-                            <h4>객체 기반 스크립트 프로그래밍 언어 </h4>
-                            <p>css 디자인에 동적 인터렉션과 기능 / 이벤트 요소를 사용한 애니메이션</p>
-                            <ul>
-                                <li>자바스크립트 기본</li>
-                                <li>연산자</li>
-                                <li>제어문</li>
-                                <li>DOM</li>
-                                <li>BOM</li>
-                                <li>함수</li>
-                                <li>이벤트</li>
-                                <li>이벤트 객체</li>
-                            </ul>
-                            <a href="#">더보기</a>
-                        </details>
-                    </li>
-                    <li><span>j query</span>
-                        <details>
-                            <summary class="screen_out">css study</summary>
-                            <h4>객체 기반 스크립트 프로그래밍 언어 </h4>
-                            <p>J Query를 활용하여 Java Script 기능을 편리하게 사용 가능</p>
-                            <ul>
-                                <li>JQuery 기본 메서드</li>
-                                <li>이벤트와 애니메이션</li>
-                                <li>풀화면 무한 슬라이드</li>
-                                <li>카테고리 + 모달팝업</li>
-                                <li>반응형 이미지 사이즈</li>
-                                <li>반응형 메인메뉴</li>
-                                <li>마우스에 반응하는 디자인</li>
-                                <li>글자 타이핑 효과</li>
-                                <li>랜덤 함수 활용 등</li>
-                            </ul>
-                            <a href="#">더보기</a>
-                        </details>
-                    </li>
-                </ul>
-            </article>
+
         </section>
         <section>
             <h2>portfolio</h2>
@@ -355,6 +374,7 @@
                 </fieldset>
             </form>
         </section>
+        <div class="back-drop"></div>
     </main>
     <footer>
         <h2>카피라이트 및 저작권</h2>
