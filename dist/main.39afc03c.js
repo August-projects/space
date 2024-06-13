@@ -172,7 +172,7 @@ module.exports = reloadCSS;
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./img\\8th_logo_white.png":[["8th_logo_white.9ff37284.png","img/8th_logo_white.png"],"img/8th_logo_white.png"],"./img\\stars.png":[["stars.def937ea.png","img/stars.png"],"img/stars.png"],"./img\\html5.svg":[["html5.36937c36.svg","img/html5.svg"],"img/html5.svg"],"./img\\css.svg":[["css.e09bd51d.svg","img/css.svg"],"img/css.svg"],"./img\\square-js.svg":[["square-js.933fb668.svg","img/square-js.svg"],"img/square-js.svg"],"./img\\jquery.svg":[["jquery.3933eb9a.svg","img/jquery.svg"],"img/jquery.svg"],"./img\\github.png":[["github.8994e164.png","img/github.png"],"img/github.png"],"./img\\sass.png":[["sass.e4fb3350.png","img/sass.png"],"img/sass.png"],"./img\\figma.png":[["figma.800b7fda.png","img/figma.png"],"img/figma.png"],"./img\\photoshop.png":[["photoshop.c4d05bd7.png","img/photoshop.png"],"img/photoshop.png"],"./img\\illustrator.png":[["illustrator.3f5fced6.png","img/illustrator.png"],"img/illustrator.png"],"./img\\premiere-pro.png":[["premiere-pro.dca62347.png","img/premiere-pro.png"],"img/premiere-pro.png"],"./img\\after-effects.png":[["after-effects.0f4bac9e.png","img/after-effects.png"],"img/after-effects.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./img\\stars.png":[["stars.def937ea.png","img/stars.png"],"img/stars.png"],"./img\\8th_logo_white.png":[["8th_logo_white.9ff37284.png","img/8th_logo_white.png"],"img/8th_logo_white.png"],"./img\\html5.svg":[["html5.36937c36.svg","img/html5.svg"],"img/html5.svg"],"./img\\css.svg":[["css.e09bd51d.svg","img/css.svg"],"img/css.svg"],"./img\\square-js.svg":[["square-js.933fb668.svg","img/square-js.svg"],"img/square-js.svg"],"./img\\jquery.svg":[["jquery.3933eb9a.svg","img/jquery.svg"],"img/jquery.svg"],"./img\\github.png":[["github.8994e164.png","img/github.png"],"img/github.png"],"./img\\sass.png":[["sass.e4fb3350.png","img/sass.png"],"img/sass.png"],"./img\\figma.png":[["figma.800b7fda.png","img/figma.png"],"img/figma.png"],"./img\\photoshop.png":[["photoshop.c4d05bd7.png","img/photoshop.png"],"img/photoshop.png"],"./img\\illustrator.png":[["illustrator.3f5fced6.png","img/illustrator.png"],"img/illustrator.png"],"./img\\premiere-pro.png":[["premiere-pro.dca62347.png","img/premiere-pro.png"],"img/premiere-pro.png"],"./img\\after-effects.png":[["after-effects.0f4bac9e.png","img/after-effects.png"],"img/after-effects.png"],"./img\\katalk.svg":[["katalk.b4a24e3b.svg","img/katalk.svg"],"img/katalk.svg"],"./img\\email.svg":[["email.d035182d.svg","img/email.svg"],"img/email.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -197,7 +197,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64605" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61641" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -6,19 +6,13 @@
 }
 @keyframes updown {
   0% {
-    transform: translateY(0px);
-  }
-  25% {
     transform: translateY(-5px);
   }
   50% {
-    transform: translateY(0px);
-  }
-  75% {
     transform: translateY(5px);
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(-5px);
   }
 }
 @keyframes opacity {
@@ -42,8 +36,12 @@
   display: none;
 }
 
-header {
+body {
   background-color: black;
+  background-image: url(/stars.def937ea.png);
+}
+
+header {
   padding: 0 40px;
 }
 header h1 {
@@ -95,9 +93,6 @@ header a {
   width: fit-content;
 }
 
-main {
-  background-image: url(/stars.def937ea.png);
-}
 main .slogan {
   height: 100vh;
   width: 100%;
@@ -145,7 +140,7 @@ main .about h2 {
   margin: 2rem;
   letter-spacing: 0.4px;
   font-family: "chosunSg";
-  font-size: 28px;
+  font-size: 2em;
   font-weight: bold;
 }
 main .about article:nth-of-type(1) {
@@ -258,6 +253,9 @@ main .about article:nth-of-type(1) + details ul li.affect {
 }
 main .about article:nth-of-type(1) + details.on {
   display: block;
+}
+main .about .study {
+  margin-top: 120px;
 }
 main .about .study h3 {
   text-transform: uppercase;
@@ -502,7 +500,178 @@ main .about .merit .wrap ul .good.on {
   transform: translateY(0);
   opacity: 1;
 }
-main .back-drop {
+main .contact {
+  margin: 170px auto;
+}
+main .contact h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "chosunSg";
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 80px 0;
+}
+main .contact .wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  max-height: 100%;
+}
+main .contact .wrap .inform {
+  height: 100%;
+  transform: translateY(-30%);
+}
+main .contact .wrap .inform p {
+  color: white;
+  font-family: "chosunKg";
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 120%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+  position: relative;
+}
+main .contact .wrap .inform p span {
+  font-family: "chosunSg";
+  font-size: 16px;
+  font-weight: lighter;
+  color: #ccc;
+}
+main .contact .wrap .inform ul {
+  left: 0;
+  top: 50%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateY(50%);
+}
+main .contact .wrap .inform ul li {
+  color: #ccc;
+  font-family: "chosunSg";
+  font-size: 16px;
+  line-height: 30px;
+}
+main .contact .wrap .inform ul li span {
+  width: 20px;
+  height: 20px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: url(/katalk.b4a24e3b.svg) center/20px no-repeat;
+  display: inline-block;
+}
+main .contact .wrap .inform ul li:nth-child(2) span {
+  background-image: url(/email.d035182d.svg);
+}
+main .contact .wrap form {
+  width: 100%;
+  max-width: 500px;
+}
+main .contact .wrap form fieldset {
+  border: none;
+  width: 100%;
+}
+main .contact .wrap form fieldset input {
+  height: 40px;
+  font-size: 18px;
+  padding: 0 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  font-family: "chosunSg";
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+main .contact .wrap form fieldset input:focus {
+  border: 2px solid #fff;
+}
+main .contact .wrap form fieldset input + label {
+  color: rgba(255, 255, 255, 0.2);
+  font-family: "chosunSg";
+  font-size: 18px;
+  height: fit-content;
+  width: fit-content;
+  position: absolute;
+  margin: -45px 0 0 20px;
+  padding: 0 10px;
+  transition: all 0.3s;
+  background-color: #000;
+  border-radius: 20px;
+}
+main .contact .wrap form fieldset input:focus + label, main .contact .wrap form fieldset input.on + label {
+  margin: -60px 0 0 20px;
+  font-size: 14px;
+  color: #fff;
+  z-index: 1;
+}
+main .contact .wrap form fieldset textarea {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  font-family: "chosunSg";
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  height: 100%;
+  padding: 20px;
+  font-size: 18px;
+}
+main .contact .wrap form fieldset textarea:focus {
+  border: 2px solid #fff;
+}
+main .contact .wrap form fieldset textarea + label {
+  position: absolute;
+  margin: -221px 0 0 20px;
+  padding: 0 10px;
+  transition: all 0.3s;
+  background-color: #000;
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 0.2);
+  font-family: "chosunSg";
+  font-size: 18px;
+  height: fit-content;
+  width: fit-content;
+}
+main .contact .wrap form fieldset textarea:focus + label, main .contact .wrap form fieldset textarea.on + label {
+  font-size: 14px;
+  color: #fff;
+  margin: -240px 0 0 20px;
+}
+main .contact .wrap form fieldset #submit {
+  width: 90px;
+  height: 35px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.2);
+  outline: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-family: var(--content);
+  position: absolute;
+  right: 0px;
+  transform: translateX(-100%);
+}
+main .contact .wrap form fieldset #submit:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.back-drop {
   position: fixed;
   top: 0;
   left: 0;
@@ -513,8 +682,38 @@ main .back-drop {
   z-index: 0;
   display: none;
 }
-main .back-drop.on {
+.back-drop.on {
   display: block;
+}
+
+footer {
+  padding: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background: #000;
+}
+footer h2 {
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 60px;
+  height: 50px;
+  background: url(/8th_logo_white.9ff37284.png) center/60px no-repeat;
+  opacity: 0.4;
+  margin: auto;
+  display: block;
+}
+footer address {
+  color: #ccc;
+  font-style: normal;
+  text-align: center;
+  font-size: 12px;
+  font-family: "chosunSg";
+}
+footer p {
+  color: #ccc;
+  opacity: 0.3;
+  text-align: center;
+  font-size: 12px;
+  font-family: "chosunSg";
 }
 
 /*# sourceMappingURL=/main.39afc03c.css.map */

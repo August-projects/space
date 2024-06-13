@@ -86,23 +86,17 @@ $text-color-W: white;
 
 @keyframes updown {
     0% {
-        transform: translateY(0px);
-    }
-
-    25% {
         transform: translateY(-5px);
     }
 
-    50% {
-        transform: translateY(0px);
-    }
 
-    75% {
+    50% {
         transform: translateY(5px);
     }
 
+
     100% {
-        transform: translateY(0px);
+        transform: translateY(-5px);
     }
 }
 
@@ -131,8 +125,12 @@ $text-color-W: white;
     display: none;
 }
 
-header {
+body {
     background-color: black;
+    background-image: url(img/stars.png);
+}
+
+header {
     padding: 0 40px;
 
     h1 {
@@ -186,7 +184,6 @@ header {
 }
 
 main {
-    background-image: url(img/stars.png);
 
     .slogan {
         height: 100vh;
@@ -248,7 +245,7 @@ main {
 
         h2 {
             @include h2;
-            @include font($content, 28px, bold);
+            @include font($content, 2em, bold);
         }
 
         article:nth-of-type(1) {
@@ -375,6 +372,7 @@ main {
         }
 
         .study {
+            margin-top: 120px;
 
             h3 {
                 @include h2;
@@ -558,7 +556,7 @@ main {
                     row-gap: 1.5rem;
                     column-gap: (1240px / 3);
                     height: 100%;
-                    
+
 
                     .good {
                         border-radius: 12px;
@@ -570,7 +568,7 @@ main {
                         position: relative;
                         transform: translateY(100%);
                         opacity: 0;
-                        transition: ease-in-out .7s ;
+                        transition: ease-in-out .7s;
 
                         &:hover {
                             background-color: #fff;
@@ -591,31 +589,37 @@ main {
                             color: $text-color-W;
                         }
 
-                        &:hover h4,  &:hover p {
+                        &:hover h4,
+                        &:hover p {
                             color: #000000;
                         }
 
                         &.left {
                             grid-area: left;
                         }
+
                         &.left2 {
                             grid-area: left2;
                         }
+
                         &.left3 {
                             grid-area: left3;
                         }
+
                         &.right {
                             grid-area: right;
                             right: 0;
-                            
+
                         }
+
                         &.right2 {
                             grid-area: right2;
-                            
+
                         }
+
                         &.right3 {
                             grid-area: right3;
-                            
+
                         }
 
                         &.on {
@@ -624,37 +628,245 @@ main {
                         }
                     }
 
-                    grid-template-areas: 
-                    "left." ".right"
+                    grid-template-areas: "left." ".right"
                     "left2." ".right2"
                     "left3." ".right3";
+                }
+            }
+        }
+    }
 
+    .contact {
+        margin: 170px auto;
+        h2 {
+            color: #fff;
+            text-transform: uppercase;
+            @include font($content, 2rem, bold);
+            text-align: center;
+            margin: 80px 0;
+        }
+
+        .wrap {
+            @include grid(1200px);
+            position: relative;
+            @include center(space-around);
+            @include height(100%);
+
+            .inform {
+                height: 100%;
+                transform: translateY(-30%);
+                
+                p {
+                    color: $text-color-W;
+                    @include font($title, 24px, bold);
+                    line-height: 120%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 1em;
+                    position: relative;
+                    span{
+                        @include font($content, 16px, lighter);
+                        color: #ccc;
+                    }
                 }
 
+                ul {
+                    left: 0;
+                    top: 50%;
+                    height: 50px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    transform: translateY(50%);
 
+                    li {
+                        color: #ccc;
+                        font-family: $content;
+                        font-size: 16px;
+                        line-height: 30px;
+
+                        span {
+                            width: 20px;
+                            height: 20px;
+                            text-indent: -9999px;
+                            overflow: hidden;
+                            background: url(img/katalk.svg) center / 20px no-repeat;
+                            display: inline-block;
+                        }
+
+                        &:nth-child(2) span {
+                            background-image: url(img/email.svg);
+                        }
+                    }
+                }
             }
 
 
+            form {
+                width: 100%;
+                max-width: 500px;
+
+                fieldset {
+                    border: none;
+                    width: 100%;
+
+                    input {
+                        height: 40px;
+                        font-size: 18px;
+                        padding: 0 20px;
+                        border: 2px solid #ffffff33;
+                        border-radius: 25px;
+                        background: transparent;
+                        outline: none;
+                        color: #fff;
+                        font-family: $content;
+                        box-sizing: border-box;
+                        display: block;
+                        width: 100%;
+                        margin-bottom: 15px;
+
+                        &:focus {
+                            border: 2px solid #fff;
+                        }
+
+                        &+label {
+                            color: #ffffff33;
+                            font-family: $content;
+                            font-size: 18px;
+                            height: fit-content;
+                            width: fit-content;
+                            position: absolute;
+                            margin: -45px 0 0 20px;
+                            padding: 0 10px;
+                            transition: all .3s;
+                            background-color: #000;
+                            border-radius: 20px;
+                        }
+
+                        &:focus+label,
+                        &.on+label {
+                            margin: -60px 0 0 20px;
+                            font-size: 14px;
+                            color: #fff;
+                            z-index: 1;
+                        }
+                    }
+
+                    textarea {
+                        border: 2px solid #ffffff33;
+                        border-radius: 25px;
+                        background: transparent;
+                        outline: none;
+                        color: #fff;
+                        font-family: $content;
+                        box-sizing: border-box;
+                        display: block;
+                        width: 100%;
+                        margin-bottom: 15px;
+                        height: 100%;
+                        padding: 20px;
+                        font-size: 18px;
+
+                        &:focus {
+                            border: 2px solid #fff;
+                        }
+
+                        &+label {
+                            position: absolute;
+                            margin: -221px 0 0 20px;
+                            padding: 0 10px;
+                            transition: all .3s;
+                            background-color: #000;
+                            border-radius: 20px;
+                            color: #ffffff33;
+                            font-family: $content;
+                            font-size: 18px;
+                            height: fit-content;
+                            width: fit-content;
+                        }
+
+                        &:focus+label,
+                        &.on+label {
+                            font-size: 14px;
+                            color: #fff;
+                            margin: -240px 0 0 20px;
+                        }
+                    }
+
+                    #submit {
+                        width: 90px;
+                        height: 35px;
+                        border: 2px solid #ffffff33;
+                        background-color: transparent;
+                        color: #ffffff33;
+                        outline: none;
+                        border-radius: 25px;
+                        font-size: 18px;
+                        font-family: var(--content);
+                        position: absolute;
+                        right: 0px;
+                        transform: translateX(-100%);
+
+                        &:hover {
+                            color: #fff;
+                            border-color: #fff;
+                        }
+                    }
+
+
+                }
+            }
         }
 
+    }
+}
 
+.back-drop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    opacity: .3;
+    z-index: 0;
+    display: none;
 
+    &.on {
+        display: block;
+    }
+}
+
+footer {
+    padding: 30px;
+    border-top: 1px solid #ffffff33;
+    background: #000;
+
+    h2 {
+        text-indent: -9999px;
+        overflow: hidden;
+        width: 60px;
+        height: 50px;
+        background: url(img/8th_logo_white.png) center/60px no-repeat;
+        opacity: .4;
+        margin: auto;
+        display: block;
     }
 
-    .back-drop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: #000000;
+    address {
+        color: #ccc;
+        font-style: normal;
+        text-align: center;
+        font-size: 12px;
+        font-family: $content;
+    }
+
+    p {
+        color: #ccc;
         opacity: .3;
-        z-index: 0;
-        display: none;
-
-        &.on {
-            display: block;
-        }
+        text-align: center;
+        font-size: 12px;
+        font-family: $content;
     }
-
 }
