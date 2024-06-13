@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "ChosunSg";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunSg.woff") format("woff");
@@ -26,6 +27,14 @@
     opacity: 1;
   }
 }
+@keyframes twinkle {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -38,7 +47,12 @@
 
 body {
   background-color: black;
+  opacity: 1;
   background-image: url(/stars.def937ea.png);
+}
+body .twinkle {
+  background-image: url(/twinkle.a006e842.png);
+  animation: twinkle 50s linear infinite;
 }
 
 header {
@@ -88,7 +102,7 @@ header a {
   color: aliceblue;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 20px;
   font-family: "chosunSg";
   width: fit-content;
 }
@@ -139,7 +153,7 @@ main .about h2 {
   color: white;
   margin: 2rem;
   letter-spacing: 0.4px;
-  font-family: "chosunSg";
+  font-family: "chosunKg";
   font-size: 2em;
   font-weight: bold;
 }
@@ -164,7 +178,7 @@ main .about article:nth-of-type(1) div h3 {
   text-align: center;
   color: white;
   font-family: "chosunSg";
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
 }
 main .about article:nth-of-type(1) div ul {
@@ -263,9 +277,10 @@ main .about .study h3 {
   color: white;
   margin: 2rem;
   letter-spacing: 0.4px;
-  font-family: "chosunSg";
+  font-family: "chosunKg";
   font-size: 24px;
   font-weight: bold;
+  margin: 2rem 0;
 }
 main .about .study > ul {
   display: flex;
@@ -411,6 +426,7 @@ main .about .merit svg {
   top: 50%;
   left: 50%;
   transform: translateX(-50%);
+  z-index: -1;
 }
 main .about .merit svg .path {
   opacity: 0;
@@ -419,6 +435,9 @@ main .about .merit svg .path {
 main .about .merit svg .path.on {
   opacity: 1;
   transition: ease-in-out 0.5s;
+}
+main .about .merit svg.on {
+  z-index: 1;
 }
 main .about .merit .wrap {
   top: 0;
@@ -446,7 +465,7 @@ main .about .merit .wrap ul .good {
   max-height: 150px;
   padding: 1.5rem 0.2rem 0rem;
   border: 2px solid white;
-  background-color: #000000;
+  background-color: black;
   position: relative;
   transform: translateY(100%);
   opacity: 0;
@@ -475,7 +494,7 @@ main .about .merit .wrap ul .good p {
   color: white;
 }
 main .about .merit .wrap ul .good:hover h4, main .about .merit .wrap ul .good:hover p {
-  color: #000000;
+  color: black;
 }
 main .about .merit .wrap ul .good.left {
   grid-area: left;
@@ -500,13 +519,189 @@ main .about .merit .wrap ul .good.on {
   transform: translateY(0);
   opacity: 1;
 }
+main .portfolio h2 {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  margin: 2rem;
+  letter-spacing: 0.4px;
+  font-family: "chosunKg";
+  font-size: 32px;
+  font-weight: bold;
+}
+main .portfolio > ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 250px;
+  margin: auto;
+}
+main .portfolio > ul button {
+  color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 35px;
+  font-family: "chosunKg";
+  font-size: 16px;
+  padding: 7px 20px;
+  cursor: pointer;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+main .portfolio > ul button:hover {
+  color: white;
+  border: 2px solid white;
+}
+main .portfolio > ul button.on {
+  color: #ffffff;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+main .portfolio .web {
+  display: none;
+}
+main .portfolio .web.on {
+  display: block;
+}
+main .portfolio .web ul {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 80px;
+}
+main .portfolio .web ul li {
+  border-bottom: 2px solid white;
+  position: relative;
+}
+main .portfolio .web ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  font-family: "chosunKg";
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+main .portfolio .web ul li::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: url(/셀렉토커피홈페이지.287d01e5.png) center/cover no-repeat;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+}
+main .portfolio .web ul li:hover::after {
+  opacity: 1;
+}
+main .portfolio .web ul li:nth-of-type(2)::after {
+  background-image: url(/현대그린푸드_홈페이지.858d2a66.png);
+}
+main .portfolio .web ul li:nth-of-type(3)::after {
+  background-image: url(/삼성디스플레이뉴스룸.a0a97e75.png);
+}
+main .portfolio .web ul li:nth-of-type(4)::after {
+  background-image: url(/8th포트폴리오페이지.31d4f556.png);
+}
+main .portfolio .design {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 80px;
+  display: none;
+}
+main .portfolio .design.on {
+  display: block;
+}
+main .portfolio .design > ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 1rem;
+}
+main .portfolio .design > ul > li {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+main .portfolio .design > ul > li > p {
+  font-family: "chosunKg";
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: none;
+}
+main .portfolio .design > ul > li > img {
+  width: 100%;
+}
+main .portfolio .design > ul > li:hover > p {
+  display: block;
+}
+main .portfolio .design > ul > li:hover img {
+  filter: brightness(0.3);
+}
+main .portfolio .design > ul > li details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 2;
+  background-color: black;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  border-radius: 12px;
+}
+main .portfolio .design > ul > li details.on {
+  display: block;
+}
+main .portfolio .design > ul > li details img,
+main .portfolio .design > ul > li details video {
+  width: 100%;
+  max-width: 400px;
+  margin: 1.5rem 0;
+}
+main .portfolio .design > ul > li details p {
+  color: white;
+  text-transform: uppercase;
+  font-family: "chosunKg";
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 1rem 0;
+}
+main .portfolio .design > ul > li details ul {
+  display: flex;
+  justify-content: space-between;
+}
+main .portfolio .design > ul > li details ul li {
+  color: white;
+  text-transform: uppercase;
+  font-family: "chosunSg";
+  font-size: 14px;
+  font-weight: lighter;
+}
 main .contact {
   margin: 170px auto;
 }
 main .contact h2 {
-  color: #fff;
+  color: white;
   text-transform: uppercase;
-  font-family: "chosunSg";
+  font-family: "chosunKg";
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -607,7 +802,7 @@ main .contact .wrap form fieldset input + label {
   margin: -45px 0 0 20px;
   padding: 0 10px;
   transition: all 0.3s;
-  background-color: #000;
+  background-color: black;
   border-radius: 20px;
 }
 main .contact .wrap form fieldset input:focus + label, main .contact .wrap form fieldset input.on + label {
@@ -639,7 +834,7 @@ main .contact .wrap form fieldset textarea + label {
   margin: -221px 0 0 20px;
   padding: 0 10px;
   transition: all 0.3s;
-  background-color: #000;
+  background-color: black;
   border-radius: 20px;
   color: rgba(255, 255, 255, 0.2);
   font-family: "chosunSg";
@@ -677,8 +872,8 @@ main .contact .wrap form fieldset #submit:hover {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #000000;
-  opacity: 0.3;
+  background-color: black;
+  opacity: 0.8;
   z-index: 0;
   display: none;
 }
@@ -689,7 +884,7 @@ main .contact .wrap form fieldset #submit:hover {
 footer {
   padding: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  background: #000;
+  background: black;
 }
 footer h2 {
   text-indent: -9999px;

@@ -9,6 +9,9 @@ $title: 'chosunKg';
 $content: 'chosunSg';
 $font-awesome: "Font Awesome 6 Free";
 $text-color-W: white;
+$text-color-light-grey: #ccc;
+$text-color-B: black;
+$text-color-weak: #ffffff33;
 
 @mixin grid($max) {
     width: 100%;
@@ -89,11 +92,9 @@ $text-color-W: white;
         transform: translateY(-5px);
     }
 
-
     50% {
         transform: translateY(5px);
     }
-
 
     100% {
         transform: translateY(-5px);
@@ -115,6 +116,16 @@ $text-color-W: white;
     }
 }
 
+@keyframes twinkle {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -126,8 +137,14 @@ $text-color-W: white;
 }
 
 body {
-    background-color: black;
+    background-color: $text-color-B;
+
+    opacity: 1;
     background-image: url(img/stars.png);
+    .twinkle {
+        background-image: url(img/twinkle.png);
+        animation: twinkle 50s linear infinite;
+    }
 }
 
 header {
@@ -177,14 +194,13 @@ header {
         color: aliceblue;
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 16px;
+        font-size: 20px;
         font-family: $content;
         width: fit-content;
     }
 }
 
 main {
-
     .slogan {
         height: 100vh;
         @include grid(1600px);
@@ -245,7 +261,7 @@ main {
 
         h2 {
             @include h2;
-            @include font($content, 2em, bold);
+            @include font($title, 2em, bold);
         }
 
         article:nth-of-type(1) {
@@ -264,7 +280,7 @@ main {
 
                 h3 {
                     @include h3;
-                    @include font($content, 20px, bold);
+                    @include font($content, 24px, bold);
                 }
 
                 ul {
@@ -376,7 +392,8 @@ main {
 
             h3 {
                 @include h2;
-                @include font($content, 24px, bold);
+                @include font($title, 24px, bold);
+                margin: 2rem 0;
             }
 
             &>ul {
@@ -530,6 +547,7 @@ main {
                 top: 50%;
                 left: 50%;
                 transform: translateX(-50%);
+                z-index: -1;
 
                 .path {
                     opacity: 0;
@@ -539,6 +557,10 @@ main {
                         opacity: 1;
                         transition: ease-in-out .5s;
                     }
+                }
+
+                &.on {
+                    z-index: 1;
                 }
             }
 
@@ -564,7 +586,7 @@ main {
                         @include height(150px);
                         padding: 1.5rem .2rem 0rem;
                         border: 2px solid $text-color-W;
-                        background-color: #000000;
+                        background-color: $text-color-B;
                         position: relative;
                         transform: translateY(100%);
                         opacity: 0;
@@ -591,7 +613,7 @@ main {
 
                         &:hover h4,
                         &:hover p {
-                            color: #000000;
+                            color: $text-color-B;
                         }
 
                         &.left {
@@ -636,12 +658,204 @@ main {
         }
     }
 
+    .portfolio {
+
+        h2 {
+            @include h2;
+            @include font($title, 32px, bold);
+        }
+
+        &>ul {
+            @include center(space-around);
+            @include width(250px);
+            margin: auto;
+
+            button {
+                color: $text-color-weak;
+                border: 2px solid $text-color-weak;
+                border-radius: 35px;
+                font-family: $title;
+                font-size: 16px;
+                padding: 7px 20px;
+                cursor: pointer;
+                background-color: transparent;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: $text-color-W;
+                    border: 2px solid $text-color-W;
+                }
+
+                &.on {
+                    color: #ffffff;
+                    border: 2px solid $text-color-W;
+                    background-color: $text-color-weak;
+                }
+            }
+
+        }
+
+        .web {
+            display: none;
+
+            &.on {
+                display: block;
+            }
+
+            ul {
+                @include grid(1200px);
+                margin-top: 80px;
+
+
+                li {
+                    border-bottom: 2px solid $text-color-W;
+                    position: relative;
+
+                    a {
+                        text-decoration: none;
+                        color: $text-color-W;
+                        text-transform: uppercase;
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        padding: 2rem;
+                        @include font($title, 1.5rem, bold);
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: -100%;
+                        right: 0;
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        background: url(img/uiux_pt/셀렉토커피홈페이지.png) center / cover no-repeat;
+                        transition: all .3s ease-out;
+                        opacity: 0;
+                    }
+
+                    &:hover::after {
+                        opacity: 1;
+                    }
+
+                    &:nth-of-type(2)::after {
+                        background-image: url(img/uiux_pt/현대그린푸드_홈페이지.png);
+                    }
+
+                    &:nth-of-type(3)::after {
+                        background-image: url(img/uiux_pt/삼성디스플레이뉴스룸.png);
+                    }
+
+                    &:nth-of-type(4)::after {
+                        background-image: url(img/uiux_pt/8th포트폴리오페이지.png);
+                    }
+                }
+            }
+        }
+
+        .design {
+            @include grid(1200px);
+            margin-top: 80px;
+            display: none;
+
+            &.on {
+                display: block;
+            }
+
+            &>ul {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                row-gap: 1rem;
+
+                &>li {
+                    @include width(260px);
+                    border-radius: 8px;
+                    overflow: hidden;
+                    position: relative;
+
+                    &>p {
+                        @include font($title, 16px, bold);
+                        text-transform: uppercase;
+                        text-align: center;
+                        color: $text-color-W;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: 1;
+                        display: none;
+                    }
+
+                    &>img {
+                        width: 100%;
+                    }
+
+                    &:hover>p {
+                        display: block;
+                    }
+
+                    &:hover img {
+                        filter: brightness(.3);
+                    }
+
+                    details {
+                        position: fixed;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        display: none;
+                        z-index: 2;
+                        background-color: $text-color-B;
+                        border: 1px solid $text-color-light-grey;
+                        padding: 2rem;
+                        border-radius: 12px;
+
+                        &.on {
+                            display: block
+                        }
+
+                        img,
+                        video {
+                            @include width(400px);
+                            margin: 1.5rem 0;
+                        }
+
+                        p {
+                            color: $text-color-W;
+                            text-transform: uppercase;
+                            @include font($title, 20px, bold);
+                            margin: 0 0 1rem 0;
+                        }
+
+                        ul {
+                            display: flex;
+                            justify-content: space-between;
+
+                            li {
+                                color: $text-color-W;
+                                text-transform: uppercase;
+                                @include font($content, 14px, lighter)
+                            }
+                        }
+
+
+
+
+                    }
+                }
+            }
+        }
+    }
+
     .contact {
         margin: 170px auto;
+
         h2 {
-            color: #fff;
+            color: $text-color-W;
             text-transform: uppercase;
-            @include font($content, 2rem, bold);
+            @include font($title, 2rem, bold);
             text-align: center;
             margin: 80px 0;
         }
@@ -655,7 +869,7 @@ main {
             .inform {
                 height: 100%;
                 transform: translateY(-30%);
-                
+
                 p {
                     color: $text-color-W;
                     @include font($title, 24px, bold);
@@ -665,9 +879,10 @@ main {
                     align-items: flex-start;
                     gap: 1em;
                     position: relative;
-                    span{
+
+                    span {
                         @include font($content, 16px, lighter);
-                        color: #ccc;
+                        color: $text-color-light-grey;
                     }
                 }
 
@@ -681,7 +896,7 @@ main {
                     transform: translateY(50%);
 
                     li {
-                        color: #ccc;
+                        color: $text-color-light-grey;
                         font-family: $content;
                         font-size: 16px;
                         line-height: 30px;
@@ -715,7 +930,7 @@ main {
                         height: 40px;
                         font-size: 18px;
                         padding: 0 20px;
-                        border: 2px solid #ffffff33;
+                        border: 2px solid $text-color-weak;
                         border-radius: 25px;
                         background: transparent;
                         outline: none;
@@ -731,7 +946,7 @@ main {
                         }
 
                         &+label {
-                            color: #ffffff33;
+                            color: $text-color-weak;
                             font-family: $content;
                             font-size: 18px;
                             height: fit-content;
@@ -740,7 +955,7 @@ main {
                             margin: -45px 0 0 20px;
                             padding: 0 10px;
                             transition: all .3s;
-                            background-color: #000;
+                            background-color: $text-color-B;
                             border-radius: 20px;
                         }
 
@@ -754,7 +969,7 @@ main {
                     }
 
                     textarea {
-                        border: 2px solid #ffffff33;
+                        border: 2px solid $text-color-weak;
                         border-radius: 25px;
                         background: transparent;
                         outline: none;
@@ -777,9 +992,9 @@ main {
                             margin: -221px 0 0 20px;
                             padding: 0 10px;
                             transition: all .3s;
-                            background-color: #000;
+                            background-color: $text-color-B;
                             border-radius: 20px;
-                            color: #ffffff33;
+                            color: $text-color-weak;
                             font-family: $content;
                             font-size: 18px;
                             height: fit-content;
@@ -797,9 +1012,9 @@ main {
                     #submit {
                         width: 90px;
                         height: 35px;
-                        border: 2px solid #ffffff33;
+                        border: 2px solid $text-color-weak;
                         background-color: transparent;
-                        color: #ffffff33;
+                        color: $text-color-weak;
                         outline: none;
                         border-radius: 25px;
                         font-size: 18px;
@@ -828,8 +1043,8 @@ main {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #000000;
-    opacity: .3;
+    background-color: $text-color-B;
+    opacity: .8;
     z-index: 0;
     display: none;
 
@@ -840,8 +1055,8 @@ main {
 
 footer {
     padding: 30px;
-    border-top: 1px solid #ffffff33;
-    background: #000;
+    border-top: 1px solid $text-color-weak;
+    background: $text-color-B;
 
     h2 {
         text-indent: -9999px;
@@ -855,7 +1070,7 @@ footer {
     }
 
     address {
-        color: #ccc;
+        color: $text-color-light-grey;
         font-style: normal;
         text-align: center;
         font-size: 12px;
@@ -863,7 +1078,7 @@ footer {
     }
 
     p {
-        color: #ccc;
+        color: $text-color-light-grey;
         opacity: .3;
         text-align: center;
         font-size: 12px;
