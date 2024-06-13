@@ -80,7 +80,7 @@ header a::after {
   transition: 0.2s ease-in;
 }
 header li {
-  padding: 1em 2em;
+  padding: 1rem 2rem;
 }
 header li:hover a::after {
   width: 100%;
@@ -96,7 +96,6 @@ header a {
 }
 
 main {
-  background-color: black;
   background-image: url(/stars.def937ea.png);
 }
 main .slogan {
@@ -115,7 +114,7 @@ main .slogan ul:nth-child(3) li {
   color: white;
   text-transform: uppercase;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-family: "chosunSg";
   cursor: default;
   line-height: 120%;
@@ -123,7 +122,7 @@ main .slogan ul:nth-child(3) li {
 main .slogan > p {
   position: relative;
   color: grey;
-  margin: 2em;
+  margin: 2rem;
   animation: opacity 3s ease-in infinite;
   text-align: center;
   text-transform: uppercase;
@@ -139,16 +138,11 @@ main .slogan > p::after {
   border-bottom: 1px solid grey;
   border-left: 1px solid grey;
 }
-main .about {
-  width: 100%;
-  max-width: 1600px;
-  margin: auto;
-}
 main .about h2 {
   text-transform: uppercase;
   text-align: center;
   color: white;
-  margin: 2em;
+  margin: 2rem;
   letter-spacing: 0.4px;
   font-family: "chosunSg";
   font-size: 28px;
@@ -213,7 +207,7 @@ main .about article:nth-of-type(1) + details {
 }
 main .about article:nth-of-type(1) + details ul {
   display: grid;
-  margin-top: 2em;
+  margin-top: 2rem;
   grid-template-columns: repeat(8, 1fr);
 }
 main .about article:nth-of-type(1) + details ul li {
@@ -269,7 +263,7 @@ main .about .study h3 {
   text-transform: uppercase;
   text-align: center;
   color: white;
-  margin: 2em;
+  margin: 2rem;
   letter-spacing: 0.4px;
   font-family: "chosunSg";
   font-size: 24px;
@@ -278,10 +272,7 @@ main .about .study h3 {
 main .about .study > ul {
   display: flex;
   gap: 10px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border: 1px solid 0;
+  justify-content: center;
 }
 main .about .study > ul .container {
   position: relative;
@@ -312,15 +303,19 @@ main .about .study > ul .container .card .front {
   backface-visibility: hidden;
   color: white;
   background: url(/html5.36937c36.svg) center/50% no-repeat;
+  animation: updown 5s ease-out infinite;
 }
 main .about .study > ul .container .card .front.css {
   background-image: url(/css.e09bd51d.svg);
+  animation: updown 5.1s linear infinite;
 }
 main .about .study > ul .container .card .front.vanila {
   background-image: url(/square-js.933fb668.svg);
+  animation: updown 5.2s linear infinite;
 }
 main .about .study > ul .container .card .front.jquery {
   background-image: url(/jquery.3933eb9a.svg);
+  animation: updown 5.3s linear infinite;
 }
 main .about .study > ul .container .card .front span {
   font-family: "chosunSg";
@@ -406,6 +401,106 @@ main .about .study > ul .container .card .back a:hover {
 main .about .study > ul .container span {
   color: white;
   text-transform: uppercase;
+}
+main .about .merit {
+  position: relative;
+  height: 100%;
+  margin-top: 200px;
+}
+main .about .merit svg {
+  opacity: 0.8;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main .about .merit svg .path {
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
+main .about .merit svg .path.on {
+  opacity: 1;
+  transition: ease-in-out 0.5s;
+}
+main .about .merit .wrap {
+  top: 0;
+  overflow: hidden;
+  position: relative;
+  height: 200vh;
+}
+main .about .merit .wrap ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  width: 100%;
+  max-width: 1240px;
+  margin: auto;
+  row-gap: 1.5rem;
+  column-gap: 413.3333333333px;
+  height: 100%;
+  grid-template-areas: "left." ".right" "left2." ".right2" "left3." ".right3";
+}
+main .about .merit .wrap ul .good {
+  border-radius: 12px;
+  width: 100%;
+  max-width: 450px;
+  height: 100%;
+  max-height: 150px;
+  padding: 1.5rem 0.2rem 0rem;
+  border: 2px solid white;
+  background-color: #000000;
+  position: relative;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: ease-in-out 0.7s;
+}
+main .about .merit .wrap ul .good:hover {
+  background-color: #fff;
+}
+main .about .merit .wrap ul .good h4 {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  font-family: "chosunKg";
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0 16px;
+  color: white;
+}
+main .about .merit .wrap ul .good p {
+  word-break: keep-all;
+  font-family: "chosunSg";
+  font-size: 1.1rem;
+  font-weight: light;
+  line-height: 130%;
+  text-align: center;
+  color: white;
+}
+main .about .merit .wrap ul .good:hover h4, main .about .merit .wrap ul .good:hover p {
+  color: #000000;
+}
+main .about .merit .wrap ul .good.left {
+  grid-area: left;
+}
+main .about .merit .wrap ul .good.left2 {
+  grid-area: left2;
+}
+main .about .merit .wrap ul .good.left3 {
+  grid-area: left3;
+}
+main .about .merit .wrap ul .good.right {
+  grid-area: right;
+  right: 0;
+}
+main .about .merit .wrap ul .good.right2 {
+  grid-area: right2;
+}
+main .about .merit .wrap ul .good.right3 {
+  grid-area: right3;
+}
+main .about .merit .wrap ul .good.on {
+  transform: translateY(0);
+  opacity: 1;
 }
 main .back-drop {
   position: fixed;

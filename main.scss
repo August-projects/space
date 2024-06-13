@@ -58,7 +58,7 @@ $text-color-W: white;
     ;
 
     color: $text-color-W;
-    margin: 2em;
+    margin: 2rem;
     letter-spacing: .4px;
 }
 
@@ -75,7 +75,7 @@ $text-color-W: white;
 
 }
 
-@mixin p ($size){
+@mixin p ($size) {
     font: {
         family: $content;
         size: $size;
@@ -105,6 +105,7 @@ $text-color-W: white;
         transform: translateY(0px);
     }
 }
+
 
 @keyframes opacity {
     0% {
@@ -166,7 +167,7 @@ header {
     }
 
     li {
-        padding: 1em 2em;
+        padding: 1rem 2rem;
 
         &:hover a::after {
             width: 100%;
@@ -185,7 +186,6 @@ header {
 }
 
 main {
-    background-color: black;
     background-image: url(img/stars.png);
 
     .slogan {
@@ -208,7 +208,7 @@ main {
             }
 
             font: {
-                size: 1.5em;
+                size: 1.5rem;
                 family: $content;
             }
 
@@ -219,7 +219,7 @@ main {
         &>p {
             position: relative;
             color: grey;
-            margin: 2em;
+            margin: 2rem;
             animation: opacity 3s ease-in infinite;
 
             text: {
@@ -245,7 +245,6 @@ main {
     }
 
     .about {
-        @include grid(1600px);
 
         h2 {
             @include h2;
@@ -307,7 +306,7 @@ main {
 
                 ul {
                     display: grid;
-                    margin-top: 2em;
+                    margin-top: 2rem;
                     grid-template-columns: repeat(8, 1fr);
 
                     li {
@@ -385,8 +384,7 @@ main {
             &>ul {
                 display: flex;
                 gap: 10px;
-                @include center(space-around);
-                border: 1px solid red($color: #000000);
+                justify-content: center;
 
                 .container {
                     position: relative;
@@ -395,7 +393,8 @@ main {
                     height: 360px;
                     padding: 16px;
                     box-sizing: border-box;
-                    &:hover .card{
+
+                    &:hover .card {
                         transform: rotateY(180deg);
                     }
 
@@ -416,20 +415,24 @@ main {
                             backface-visibility: hidden;
                             color: $text-color-W;
                             background: url(img/html5.svg) center / 50% no-repeat;
+                            animation: updown 5s ease-out infinite;
 
                             &.css {
                                 background-image: url(img/css.svg);
+                                animation: updown 5.1s linear infinite;
                             }
 
                             &.vanila {
                                 background-image: url(img/square-js.svg);
+                                animation: updown 5.2s linear infinite;
                             }
 
                             &.jquery {
                                 background-image: url(img/jquery.svg);
+                                animation: updown 5.3s linear infinite;
                             }
 
-                            span{
+                            span {
                                 @include font($content, 20px, light);
                                 position: absolute;
                                 left: 50%;
@@ -455,7 +458,7 @@ main {
                                 margin: 20px 0;
                                 position: relative;
                                 word-break: keep-all;
-            
+
                                 &::after {
                                     content: "";
                                     position: absolute;
@@ -465,7 +468,7 @@ main {
                                     height: 1px;
                                     background-color: rgba($color: #fff, $alpha: .3);
                                 }
-            
+
                                 &+p {
                                     @include font($content, 12px, light);
                                     color: $text-color-W;
@@ -475,12 +478,12 @@ main {
                                     word-break: keep-all
                                 }
                             }
-            
+
                             ul {
                                 display: grid;
-                                grid-template-columns: repeat(2,1fr);
+                                grid-template-columns: repeat(2, 1fr);
                                 column-gap: 5px;
-            
+
                                 li {
                                     @include p(14px);
                                     transform: translateX(4%);
@@ -490,8 +493,8 @@ main {
                                     line-height: 120%;
                                 }
                             }
-            
-            
+
+
                             a {
                                 border: 1px solid $text-color-W;
                                 text-decoration: none;
@@ -502,7 +505,7 @@ main {
                                 right: 20px;
                                 bottom: 20px;
                                 opacity: .3;
-            
+
                                 &:hover {
                                     opacity: 1;
                                 }
@@ -516,8 +519,122 @@ main {
                     }
                 }
             }
+        }
 
-            
+        .merit {
+            position: relative;
+            height: 100%;
+            margin-top: 200px;
+
+            svg {
+                opacity: .8;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%);
+
+                .path {
+                    opacity: 0;
+                    transition: ease-in-out .5s;
+
+                    &.on {
+                        opacity: 1;
+                        transition: ease-in-out .5s;
+                    }
+                }
+            }
+
+            .wrap {
+                top: 0;
+                overflow: hidden;
+                position: relative;
+                height: 200vh;
+
+                ul {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(6, 1fr);
+                    @include grid(1240px);
+                    row-gap: 1.5rem;
+                    column-gap: (1240px / 3);
+                    height: 100%;
+                    
+
+                    .good {
+                        border-radius: 12px;
+                        @include width(450px);
+                        @include height(150px);
+                        padding: 1.5rem .2rem 0rem;
+                        border: 2px solid $text-color-W;
+                        background-color: #000000;
+                        position: relative;
+                        transform: translateY(100%);
+                        opacity: 0;
+                        transition: ease-in-out .7s ;
+
+                        &:hover {
+                            background-color: #fff;
+                        }
+
+                        h4 {
+                            @include h3;
+                            @include font($title, 1.5rem, bold);
+                            margin: 0 0 16px;
+                            color: $text-color-W;
+                        }
+
+                        p {
+                            word-break: keep-all;
+                            @include font($content, 1.1rem, light);
+                            line-height: 130%;
+                            text-align: center;
+                            color: $text-color-W;
+                        }
+
+                        &:hover h4,  &:hover p {
+                            color: #000000;
+                        }
+
+                        &.left {
+                            grid-area: left;
+                        }
+                        &.left2 {
+                            grid-area: left2;
+                        }
+                        &.left3 {
+                            grid-area: left3;
+                        }
+                        &.right {
+                            grid-area: right;
+                            right: 0;
+                            
+                        }
+                        &.right2 {
+                            grid-area: right2;
+                            
+                        }
+                        &.right3 {
+                            grid-area: right3;
+                            
+                        }
+
+                        &.on {
+                            transform: translateY(0);
+                            opacity: 1;
+                        }
+                    }
+
+                    grid-template-areas: 
+                    "left." ".right"
+                    "left2." ".right2"
+                    "left3." ".right3";
+
+                }
+
+
+            }
+
+
         }
 
 
