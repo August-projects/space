@@ -29,31 +29,29 @@
             <nav>
                 <h1><a href="#">홍승연의 포트폴리오 입니다</a></h1>
                 <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">portfolio</a></li>
-                    <li><a href="#">contact</a></li>
+                    <li class="on">home</li>
+                    <li>about</li>
+                    <li>portfolio</li>
+                    <li>contact</li>
                 </ul>
             </nav>
+            <button class="mobile"><span>mobile</span></button>
         </header>
         <main>
-
             <section class="slogan">
                 <h2 class="screen_out">slogan</h2>
+                <div class="ufo"></div>
                 <lottie-player id="firstLottie" class="orbit"
                     src="https://lottie.host/3d19d076-a888-40f5-b4ae-fdc9235c6777/WizNzXov1R.json" autoplay loop>
                 </lottie-player>
-                <ul>
-                    <li>To infinity and beyond !</li>
-                    <li>무한한 가능성, 그리고 그 너머를 꿈꾸는 개발자 홍승연입니다.</li>
-                </ul>
-                <p>scroll down</p>
+                <p class="sloganT">To infinity and beyond ! <br>무한한 가능성, 그리고 그 너머를 꿈꾸는 개발자 홍승연입니다.</p>
+                <p class="scroll">scroll down</p>
             </section>
             <section class="about">
                 <h2>About Me</h2>
-                <article>
+                <article class="profile">
                     <img src="./img/me.png" alt="me">
-                    <div>
+                    <div >
                         <h3>Hong Seung - Yeon</h3>
                         <ul>
                             <li>
@@ -180,7 +178,7 @@
                 </article>
                 <article class="merit">
                     <h3 class="screen_out">what i am good at</h3>
-                    <svg width="1373" height="200" viewBox="0 0 1373 200" fill="none"
+                    <svg width="1373" height="200" viewBox="0 0 1373 200" fill="none" 
                         xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_6_2)">
                             <mask id="path-1-outside-1_6_2" maskUnits="userSpaceOnUse" x="91" y="58" width="103"
@@ -308,68 +306,74 @@
                         </defs>
                     </svg>
 
-
                     <div class="wrap">
                         <ul>
-                            <li class="good left">
+                            <li class="good left1 ">
                                 <h4>fundamental</h4>
                                 <p>의미없는 태그를 남발하는 편리함보다 <br>시멘틱 태그를 사용하여 웹표준을 준수하는 <br>기본에 충실한 퍼블리싱을 지향합니다.</p>
                             </li>
-                            <li class="good right">
+                            <li class="good right1 ">
                                 <h4>study</h4>
                                 <p>배우고 익히기를 즐기며 <br>모르는 것을 부끄러워하지 않고 <br>지속적인 학습을 통해 전문성을 키워가고 있습니다.</p>
                             </li>
-                            <li class="good left2">
+                            <li class="good left2 ">
                                 <h4>team work</h4>
                                 <p>공동체의 목표를 위해 타인의 의견에 <br>귀를 기울이는 등, 팀원과 소통하고 협력하며<br> 최선의 결과를 내기 위해 노력합니다.</p>
                             </li>
-                            <li class="good right2">
+                            <li class="good right2 ">
                                 <h4>diligent</h4>
                                 <p>안되는 것도 될 때까지! <br>모든 일에 끈기를 가지고 <br>근면성실한 마인드로 임하고 있습니다.</p>
                             </li>
-                            <li class="good left3">
+                            <li class="good left3 ">
                                 <h4>calm</h4>
                                 <p>앞서 겪었던 사회경험을 통해 <br>다양한 돌발 상황을 침착한 마음가짐으로 대하며 최선의 결과물을 만들어냅니다.</p>
                             </li>
-                            <li class="good right3">
+                            <li class="good right3 ">
                                 <h4>optimistic</h4>
                                 <p>긍정적인 태도와 마음가짐으로 <br>문제 상황에서도 해결책을 찾아내 <br>긍정적인 결과물을 만들어낼 수 있습니다.</p>
                             </li>
                         </ul>
                     </div>
                 </article>
-
             </section>
+            
             <section class="portfolio">
                 <h2>portfolio</h2>
-                <ul>
+                <ul class="category">
                     <li><button class="on">Cording</button></li>
                     <li><button class="">Design</button></li>
                 </ul>
-                <article class="web on">
+                <article class="cording">
                     <h3 class="screen_out">web</h3>
                     <ul>
-                        <li>
-                            <a href="#">selecto coffee homepage</a>
+                        <li class="cording ">
+                            <a href="#">selecto coffee homepage
+                                <span class="cording-img"></span></a>
                         </li>
-                        <li>
-                            <a href="#">hyundai green food homepage</a>
+                        <li class="cording ">
+                            <a href="#">hyundai green food homepage
+                                <span class="cording-img"></span>
+                            </a>
                         </li>
-                        <li>
-                            <a href="#">samsung display newsroom homepage</a>
+                        <li class="cording ">
+                            <a href="#">samsung display newsroom homepage
+                            <span class="cording-img"></span>
+                            </a>
                         </li>
-                        <li>
-                            <a href="#">ex - portfolio page</a>
+                        <li class="cording ">
+                            <a href="#">ex - portfolio page
+                                <span class="cording-img"></span>
+                            </a>
                         </li>
                     </ul>
                 </article>
                 <article class="design ">
                     <h3 class="screen_out">design</h3>
                     <ul>
-                        <li>
+                        <li class="design">
                             <p>hello2024</p>
                             <img src="/img/design_pt/hello2024.png" alt="hello2024">
-                            <details open class="">
+                            <details open>
                                 <summary class="screen_out">hello2024</summary>
                                 <img src="/img/design_pt/hello2024.gif" alt="motion_banner">
                                 <p>Hello_2024</p>
@@ -381,7 +385,7 @@
                                 </ul>
                             </details>
                         </li>
-                        <li>
+                        <li class="design">
                             <p>black_friday</p>
                             <img src="/img/design_pt/black_friday.png" alt="black_friday">
                             <details open class="">
@@ -396,7 +400,7 @@
                                 </ul>
                             </details>
                         </li>
-                        <li>
+                        <li class="design">
                             <p>cyber_monday</p>
                             <img src="/img/design_pt/cybermonday.png" alt="cyber_monday">
                             <details open>
@@ -414,7 +418,7 @@
                                 </ul>
                             </details>
                         </li>
-                        <li>
+                        <li class="design">
                             <p>jackpot</p>
                             <img src="/img/design_pt/jackpot.png" alt="jackpot">
                             <details open>
@@ -432,7 +436,7 @@
                                 </ul>
                             </details>
                         </li>
-                        <li>
+                        <li class="design">
                             <p>time_sale</p>
                             <img src="/img/design_pt/timesale.png" alt="time_sale">
                             <details open>
@@ -450,7 +454,7 @@
                                 </ul>
                             </details>
                         </li>
-                        <li>
+                        <li class="design">
                             <p>nexen_tire</p>
                             <img src="img/design_pt/nexentire0.jpg" alt="nexen_tire">
                             <details open class="">
@@ -468,7 +472,7 @@
                                 </ul>
                             </details>
                         </li>
-                        <li>
+                        <li class="design">
                             <p>title design</p>
                             <img src="img/design_pt/특수영상합성.png" alt="cat's_privacy">
                             <details open class="">
@@ -486,7 +490,7 @@
                                 </ul>
                             </details>
                         </li>
-                        <li>
+                        <li class="design">
                             <p>age_notice</p>
                             <img src="img/design_pt/홍승연_3D_그래픽_제작2.png" alt="age_notice">
                             <details open class="">
@@ -503,7 +507,7 @@
                                 </ul>
                             </details>
                         </li>
-                        <li>
+                        <li class="design">
                             <p>flag</p>
                             <img src="img/design_pt/태극기0069.png" alt="flag">
                             <details open class="">
@@ -517,7 +521,7 @@
                                 </ul>
                             </details>
                         </li>
-                        <li>
+                        <li class="design">
                             <p>mushroom_village</p>
                             <img src="img/design_pt/버섯마을0031.png" alt="mushroom_village">
                             <details open class="">
