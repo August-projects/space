@@ -63,6 +63,14 @@
     background-position-x: -1000px;
   }
 }
+@keyframes card-flip {
+  0% {
+    transform: perspective(100vw) translateX(100vw) rotateY(360deg);
+  }
+  100% {
+    transform: perspective(100vw) translateX(0) rotateY(0);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -77,6 +85,7 @@ body {
   background-color: black;
   opacity: 1;
   background-image: url(/stars.def937ea.png);
+  overflow-x: hidden;
 }
 body .twinkle {
   background-image: url(/twinkle.a006e842.png);
@@ -439,6 +448,11 @@ main .about .study h3 {
   font-size: 24px;
   font-weight: bold;
   margin: 2rem 0;
+  opacity: 0;
+  transition: 0.3s;
+}
+main .about .study h3.on {
+  opacity: 1;
 }
 main .about .study > ul {
   display: flex;
@@ -454,15 +468,20 @@ main .about .study > ul .container {
   padding: 16px;
   box-sizing: border-box;
 }
-main .about .study > ul .container:hover .card {
+main .about .study > ul .container:hover .card.in {
   transform: rotateY(180deg);
 }
 main .about .study > ul .container .card {
   position: absolute;
   width: 100%;
   height: 100%;
+  transform: perspective(100vw) translateX(100vw) rotateY(360deg);
   transform-style: preserve-3d;
-  transition: all 0.5s ease;
+  transition: all 0.7s ease;
+}
+main .about .study > ul .container .card.in {
+  animation: card-flip 1.7s ease-out normal;
+  transform: perspective(100vw) translateX(0) rotateY(0);
 }
 main .about .study > ul .container .card .front {
   position: absolute;
@@ -714,7 +733,7 @@ main .about .merit .wrap ul .good:hover h4, main .about .merit .wrap ul .good:ho
   color: black;
 }
 main .about .merit .wrap ul .good.on {
-  animation: fade-in-y 0.8s ease-out normal;
+  animation: fade-in-y 0.5s ease-out normal;
   opacity: 1;
 }
 main .about .merit .wrap ul .good.on.on:nth-of-type(1) {
@@ -745,7 +764,14 @@ main .portfolio h2 {
   font-size: 32px;
   font-weight: bold;
 }
-main .portfolio > ul {
+main .portfolio .wrap {
+  opacity: 0;
+  transition: 0.8s;
+}
+main .portfolio .wrap.on {
+  opacity: 1;
+}
+main .portfolio .wrap > ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -753,7 +779,7 @@ main .portfolio > ul {
   max-width: 250px;
   margin: auto;
 }
-main .portfolio > ul button {
+main .portfolio .wrap > ul button {
   color: rgba(255, 255, 255, 0.2);
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 35px;
@@ -764,11 +790,11 @@ main .portfolio > ul button {
   background-color: transparent;
   text-transform: uppercase;
 }
-main .portfolio > ul button:hover {
+main .portfolio .wrap > ul button:hover {
   color: white;
   border: 2px solid white;
 }
-main .portfolio > ul button.on {
+main .portfolio .wrap > ul button.on {
   color: #ffffff;
   border: 2px solid white;
   background-color: rgba(255, 255, 255, 0.2);
@@ -820,12 +846,17 @@ main .portfolio .cording ul li a .cording-img {
   height: 200px;
   border-radius: 50%;
   overflow: hidden;
-  background: url(/셀렉토커피홈페이지.287d01e5.png) center/cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   transition: all 0.3s ease-out;
   opacity: 0;
 }
 main .portfolio .cording ul li:hover .cording-img {
   opacity: 1;
+}
+main .portfolio .cording ul li:nth-of-type(1) .cording-img {
+  background-image: url(/셀렉토커피홈페이지.287d01e5.png);
 }
 main .portfolio .cording ul li:nth-of-type(2) .cording-img {
   background-image: url(/현대그린푸드_홈페이지.858d2a66.png);

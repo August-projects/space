@@ -1,3 +1,5 @@
+"use strict";
+
 //side nav
 const side = document.querySelector("nav").innerHTML;
 document.querySelector("header").insertAdjacentHTML('beforeend', side);
@@ -74,14 +76,14 @@ document.querySelector(".profile button").addEventListener("click", function () 
 });;
 
 //portfolio category
-const category = document.querySelectorAll(".portfolio>ul button");
+const category = document.querySelectorAll(".portfolio>.wrap button");
 const article = document.querySelectorAll(".portfolio article>ul>li");
 
 category.forEach(function (e) {
     e.addEventListener("click", function () {
         let categoryIndex = Array.from(category).indexOf(this);
         let showTheArticle = e.textContent.toLocaleLowerCase();
-        document.querySelector(".portfolio>ul .on").classList.remove("on");
+        document.querySelector(".portfolio>.wrap .on").classList.remove("on");
         category[categoryIndex].classList.add("on");
 
         article.forEach(function (element) {
@@ -120,7 +122,7 @@ links.forEach(links => {
             webImg.classList.remove('hidden');
         })
 
-        links.addEventListener("mouseleave",()=> {
+        links.addEventListener("mouseleave", () => {
             webImg.style.transform = initialTransform;
             webImg.classList.add("hidden");
         });
@@ -128,21 +130,27 @@ links.forEach(links => {
 });
 
 //modal pop up in design portfolio
- const designClick = document.querySelectorAll(".design>ul>li");
- const designDetails = document.querySelectorAll(".design details");
- const backDrop = document.querySelector(".back-drop");
- let detailIndex = 0;
-//open
-designClick.forEach((clicking, index)=>{
-    clicking.addEventListener("click",()=>{
+const designClick = document.querySelectorAll(".design>ul>li");
+const designDetails = document.querySelectorAll(".design details");
+const backDrop = document.querySelector(".back-drop");
+let detailIndex = 0;
+    //open
+designClick.forEach((clicking, index) => {
+    clicking.addEventListener("click", () => {
         detailIndex = index;
         designDetails[detailIndex].classList.add("on");
         backDrop.classList.add("on");
         document.body.classList.add("no-scroll");
     })
 })
-//close
-backDrop.addEventListener("click",()=>{
+    //close
+backDrop.addEventListener("click", () => {
+    let video = document.querySelector(".design details.on video");
+    if(video) {
+        video.pause();
+        video.currentTime = 0;
+    }
+
     document.querySelector(".design details.on").classList.remove("on");
     backDrop.classList.remove("on");
     document.body.classList.remove("no-scroll");
@@ -181,6 +189,23 @@ window.addEventListener("scroll", function () {
         document.querySelector(".profile ul").classList.add("on");
         document.querySelector(".profile button").classList.add("on");
 
+        document.querySelector(".study>h3").classList.add("on");
+
+        const studyHeight = document.querySelector(".study").offsetTop - h;
+        if (t >= studyHeight) {
+
+            document.querySelectorAll(".card").forEach((card) => {
+                card.classList.add("in");
+            })
+        }
+
+        else {
+            document.querySelector(".study>h3").classList.remove("on");
+            document.querySelectorAll(".card").forEach((card) => {
+                card.classList.remove("in");
+            })
+        }
+
         if (t >= meritHeight && t < menu3) {
             document.querySelector(".merit svg").classList.add("on");
             document.querySelectorAll(".merit .path").forEach(
@@ -212,6 +237,11 @@ window.addEventListener("scroll", function () {
             })
         }
 
+        let categoryOn = document.querySelector(".portfolio > .wrap.on");
+        if(categoryOn){
+            categoryOn.classList.remove("on");
+        }
+
         let portfolioOn = document.querySelectorAll(".portfolio article .on");
         if (portfolioOn) {
             portfolioOn.forEach(function (e) {
@@ -226,6 +256,8 @@ window.addEventListener("scroll", function () {
         document.querySelectorAll(".merit .path").forEach(function (element) {
             element.classList.remove("on");
         })
+
+        document.querySelector(".portfolio>.wrap").classList.add("on");
 
         let categoryOn = document.querySelector(".category button.on").textContent.toLocaleLowerCase();
         article.forEach(function (element) {

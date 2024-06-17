@@ -118,6 +118,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.js":[function(require,module,exports) {
+"use strict";
+
 //side nav
 var side = document.querySelector("nav").innerHTML;
 document.querySelector("header").insertAdjacentHTML('beforeend', side);
@@ -191,13 +193,13 @@ document.querySelector(".profile button").addEventListener("click", function () 
 ;
 
 //portfolio category
-var category = document.querySelectorAll(".portfolio>ul button");
+var category = document.querySelectorAll(".portfolio>.wrap button");
 var article = document.querySelectorAll(".portfolio article>ul>li");
 category.forEach(function (e) {
   e.addEventListener("click", function () {
     var categoryIndex = Array.from(category).indexOf(this);
     var showTheArticle = e.textContent.toLocaleLowerCase();
-    document.querySelector(".portfolio>ul .on").classList.remove("on");
+    document.querySelector(".portfolio>.wrap .on").classList.remove("on");
     category[categoryIndex].classList.add("on");
     article.forEach(function (element) {
       if (element.classList.contains(showTheArticle)) {
@@ -253,6 +255,11 @@ designClick.forEach(function (clicking, index) {
 });
 //close
 backDrop.addEventListener("click", function () {
+  var video = document.querySelector(".design details.on video");
+  if (video) {
+    video.pause();
+    video.currentTime = 0;
+  }
   document.querySelector(".design details.on").classList.remove("on");
   backDrop.classList.remove("on");
   document.body.classList.remove("no-scroll");
@@ -283,6 +290,18 @@ window.addEventListener("scroll", function () {
     document.querySelector(".profile h3").classList.add("on");
     document.querySelector(".profile ul").classList.add("on");
     document.querySelector(".profile button").classList.add("on");
+    document.querySelector(".study>h3").classList.add("on");
+    var studyHeight = document.querySelector(".study").offsetTop - h;
+    if (t >= studyHeight) {
+      document.querySelectorAll(".card").forEach(function (card) {
+        card.classList.add("in");
+      });
+    } else {
+      document.querySelector(".study>h3").classList.remove("on");
+      document.querySelectorAll(".card").forEach(function (card) {
+        card.classList.remove("in");
+      });
+    }
     if (t >= meritHeight && t < menu3) {
       document.querySelector(".merit svg").classList.add("on");
       document.querySelectorAll(".merit .path").forEach(function (element) {
@@ -306,6 +325,10 @@ window.addEventListener("scroll", function () {
         e.classList.remove("on");
       });
     }
+    var categoryOn = document.querySelector(".portfolio > .wrap.on");
+    if (categoryOn) {
+      categoryOn.classList.remove("on");
+    }
     var portfolioOn = document.querySelectorAll(".portfolio article .on");
     if (portfolioOn) {
       portfolioOn.forEach(function (e) {
@@ -318,9 +341,10 @@ window.addEventListener("scroll", function () {
     document.querySelectorAll(".merit .path").forEach(function (element) {
       element.classList.remove("on");
     });
-    var categoryOn = document.querySelector(".category button.on").textContent.toLocaleLowerCase();
+    document.querySelector(".portfolio>.wrap").classList.add("on");
+    var _categoryOn = document.querySelector(".category button.on").textContent.toLocaleLowerCase();
     article.forEach(function (element) {
-      if (element.classList.contains(categoryOn)) {
+      if (element.classList.contains(_categoryOn)) {
         element.style.display = "block";
         element.classList.add("on");
       } else {
@@ -357,7 +381,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61566" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58992" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
