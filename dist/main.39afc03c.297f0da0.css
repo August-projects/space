@@ -36,16 +36,6 @@
     transform: translateX(0%);
   }
 }
-@keyframes fade-in-y2 {
-  0% {
-    opacity: 0;
-    transform: translate(50%, 100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(100%);
-  }
-}
 @keyframes opacity {
   0% {
     opacity: 0;
@@ -94,13 +84,12 @@
 body {
   background-color: black;
   opacity: 1;
-  background-image: url(/stars.def937ea.png);
+  background-image: url(/stars.def937ea.d03fc5c3.png);
   overflow-x: hidden;
 }
 body .twinkle {
-  background-image: url(/twinkle.a006e842.png);
+  background-image: url(/twinkle.a006e842.2fcbe73b.png);
   animation: twinkle 50s linear infinite;
-  overflow: hidden;
 }
 body.no-scroll {
   height: 100%;
@@ -110,7 +99,6 @@ body.no-scroll {
 header {
   padding: 0 40px;
   position: relative;
-  box-sizing: border-box;
 }
 header h1 {
   display: block;
@@ -118,7 +106,7 @@ header h1 {
   overflow: hidden;
   width: 100px;
   height: 80px;
-  background: url(/8th_logo_white.9ff37284.png) center/60px 50px no-repeat;
+  background: url(/8th_logo_white.9ff37284.064b3ca7.png) center/60px 50px no-repeat;
 }
 header nav {
   width: 100%;
@@ -197,6 +185,7 @@ header > ul li.on {
 }
 header .mobile {
   position: absolute;
+  right: 30px;
   top: 50%;
   transform: translateY(-50%);
   width: 30px;
@@ -249,20 +238,18 @@ main .slogan {
   margin: auto;
   display: flex;
   justify-content: center;
-  padding: 1em;
-  box-sizing: border-box;
 }
 main .slogan .ufo {
   width: 200px;
   height: 100px;
-  background: url(/ufo.363e6723.png) center/135px 75.8px no-repeat;
+  background: url(/ufo.363e6723.bac17d26.png) center/135px 75.8px no-repeat;
   object-fit: cover;
   transition: ease all 7S;
   position: absolute;
 }
 main .slogan .orbit {
   height: 500px;
-  max-width: 600px;
+  width: 600px;
   margin: auto;
   animation: updown 3s linear infinite;
 }
@@ -270,10 +257,7 @@ main .slogan .sloganT {
   color: white;
   height: fit-content;
   position: absolute;
-  bottom: 20%;
-  word-break: keep-all;
-  display: block;
-  width: 95%;
+  bottom: 10%;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.5rem;
@@ -286,7 +270,7 @@ main .slogan .scroll {
   color: grey;
   margin: 2rem;
   position: absolute;
-  bottom: 10%;
+  bottom: 0%;
   animation: scroll-down-information 3s ease-in infinite;
   text-align: center;
   text-transform: uppercase;
@@ -405,14 +389,11 @@ main .about .profile + details ul {
   display: grid;
   margin-top: 2rem;
   grid-template-columns: repeat(8, 1fr);
-  justify-content: center;
-  max-width: 100%;
-  margin: 2rem auto 0;
 }
 main .about .profile + details ul li {
   color: white;
-  height: 180px;
-  background: url(/html5.36937c36.svg) center/50% no-repeat;
+  height: 160px;
+  background: url(/html5.36937c36.86d69e81.svg) center/50% no-repeat;
   position: relative;
 }
 main .about .profile + details ul li span {
@@ -426,34 +407,34 @@ main .about .profile + details ul li span {
   text-align: center;
 }
 main .about .profile + details ul li.css {
-  background-image: url(/css.e09bd51d.svg);
+  background-image: url(/css.e09bd51d.1399a29c.svg);
 }
 main .about .profile + details ul li.js {
-  background-image: url(/square-js.933fb668.svg);
+  background-image: url(/square-js.933fb668.f16c9b60.svg);
 }
 main .about .profile + details ul li.jquery {
-  background-image: url(/jquery.3933eb9a.svg);
+  background-image: url(/jquery.3933eb9a.3c95167f.svg);
 }
 main .about .profile + details ul li.github {
-  background-image: url(/github.8994e164.png);
+  background-image: url(/github.8994e164.831805f4.png);
 }
 main .about .profile + details ul li.scss {
-  background-image: url(/sass.e4fb3350.png);
+  background-image: url(/sass.e4fb3350.f995cb45.png);
 }
 main .about .profile + details ul li.figma {
-  background-image: url(/figma.800b7fda.png);
+  background-image: url(/figma.800b7fda.e8a3fd31.png);
 }
 main .about .profile + details ul li.photoshop {
-  background-image: url(/photoshop.c4d05bd7.png);
+  background-image: url(/photoshop.c4d05bd7.d6630420.png);
 }
 main .about .profile + details ul li.illur {
-  background-image: url(/illustrator.3f5fced6.png);
+  background-image: url(/illustrator.3f5fced6.689e2c6c.png);
 }
 main .about .profile + details ul li.premier {
-  background-image: url(/premiere-pro.dca62347.png);
+  background-image: url(/premiere-pro.dca62347.bbc38e31.png);
 }
 main .about .profile + details ul li.affect {
-  background-image: url(/after-effects.0f4bac9e.png);
+  background-image: url(/after-effects.0f4bac9e.3724fb89.png);
 }
 main .about .profile + details.on {
   width: 100%;
@@ -479,6 +460,7 @@ main .about .study h3.on {
   opacity: 1;
 }
 main .about .study .wrap {
+  width: 100%;
   max-width: 1240px;
   margin: auto;
 }
@@ -488,6 +470,7 @@ main .about .study .wrap.swiper {
 main .about .study .wrap > ul {
   display: flex;
   gap: 10px;
+  width: fit-content;
   margin: auto;
   padding: 2rem 0 4rem 0;
 }
@@ -526,19 +509,19 @@ main .about .study .wrap > ul .container .card .front {
   border-radius: 12px;
   backface-visibility: hidden;
   color: white;
-  background: url(/html5.36937c36.svg) center/50% no-repeat;
+  background: url(/html5.36937c36.86d69e81.svg) center/50% no-repeat;
   animation: updown 5s ease-out infinite;
 }
 main .about .study .wrap > ul .container .card .front.css {
-  background-image: url(/css.e09bd51d.svg);
+  background-image: url(/css.e09bd51d.1399a29c.svg);
   animation: updown 5.1s linear infinite;
 }
 main .about .study .wrap > ul .container .card .front.vanila {
-  background-image: url(/square-js.933fb668.svg);
+  background-image: url(/square-js.933fb668.f16c9b60.svg);
   animation: updown 5.2s linear infinite;
 }
 main .about .study .wrap > ul .container .card .front.jquery {
-  background-image: url(/jquery.3933eb9a.svg);
+  background-image: url(/jquery.3933eb9a.3c95167f.svg);
   animation: updown 5.3s linear infinite;
 }
 main .about .study .wrap > ul .container .card .front span {
@@ -626,6 +609,13 @@ main .about .study .wrap > ul .container span {
   color: white;
   text-transform: uppercase;
 }
+main .about .study .wrap .pagination {
+  border: 1px solid red;
+  width: fit-content;
+  height: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+}
 main .about .merit {
   position: relative;
   height: 100%;
@@ -694,8 +684,6 @@ main .about .merit .wrap {
   top: 0;
   position: relative;
   height: 200vh;
-  max-width: 1600px;
-  margin: auto;
 }
 main .about .merit .wrap ul {
   display: grid;
@@ -704,7 +692,7 @@ main .about .merit .wrap ul {
   width: 100%;
   max-width: 1240px;
   margin: auto;
-  row-gap: 1.8rem;
+  row-gap: 1.5rem;
   column-gap: 30%;
   height: 100%;
   box-sizing: border-box;
@@ -713,18 +701,16 @@ main .about .merit .wrap ul {
 main .about .merit .wrap ul .good {
   border-radius: 12px;
   width: 100%;
-  max-width: 350px;
+  max-width: 380px;
   height: 100%;
   max-height: 125px;
-  padding: 1em 1em 0rem;
+  padding: 1.5rem 0.2rem 0rem;
   border: 2px solid white;
   background-color: black;
   position: relative;
   opacity: 0;
   transition: ease-in-out 0.7s;
   z-index: 1;
-  word-break: break-all;
-  box-sizing: border-box;
 }
 main .about .merit .wrap ul .good.left1 {
   grid-area: left1;
@@ -753,12 +739,13 @@ main .about .merit .wrap ul .good h4 {
   text-align: center;
   color: white;
   font-family: "chosunKg";
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 0 0 16px;
   color: white;
 }
 main .about .merit .wrap ul .good p {
+  word-break: keep-all;
   font-family: "chosunSg";
   font-size: 0.8rem;
   font-weight: lighter;
@@ -839,25 +826,16 @@ main .portfolio .wrap > ul button.on {
   border: 2px solid white;
   background-color: rgba(255, 255, 255, 0.2);
 }
-main .portfolio .cording {
-  padding: 0 1rem;
-  width: 100%;
-  box-sizing: border-box;
-}
 main .portfolio .cording ul {
   width: 100%;
   max-width: 1200px;
   margin: auto;
   margin-top: 80px;
-  padding: 1rem;
-  box-sizing: border-box;
 }
 main .portfolio .cording ul li {
   border-bottom: 2px solid white;
   position: relative;
   opacity: 0;
-  width: 100%;
-  box-sizing: border-box;
 }
 main .portfolio .cording ul li.on {
   animation: fade-in-x 0.5s ease-out normal;
@@ -882,9 +860,9 @@ main .portfolio .cording ul li a {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 2rem 0;
+  padding: 2rem;
   font-family: "chosunKg";
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 main .portfolio .cording ul li a .cording-img {
@@ -905,31 +883,29 @@ main .portfolio .cording ul li:hover .cording-img {
   opacity: 1;
 }
 main .portfolio .cording ul li:nth-of-type(1) .cording-img {
-  background-image: url(/셀렉토커피홈페이지.287d01e5.png);
+  background-image: url(/셀렉토커피홈페이지.287d01e5.a649dbf6.png);
 }
 main .portfolio .cording ul li:nth-of-type(2) .cording-img {
-  background-image: url(/현대그린푸드_홈페이지.858d2a66.png);
+  background-image: url(/현대그린푸드_홈페이지.858d2a66.270329f4.png);
 }
 main .portfolio .cording ul li:nth-of-type(3) .cording-img {
-  background-image: url(/삼성디스플레이뉴스룸.a0a97e75.png);
+  background-image: url(/삼성디스플레이뉴스룸.a0a97e75.cc70b0d5.png);
 }
 main .portfolio .cording ul li:nth-of-type(4) .cording-img {
-  background-image: url(/8th포트폴리오페이지.31d4f556.png);
+  background-image: url(/8th포트폴리오페이지.31d4f556.15134b83.png);
 }
-main .portfolio > .design {
+main .portfolio .design {
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  margin-top: 40px;
-  padding: 1em;
-  box-sizing: border-box;
+  margin-top: 80px;
 }
-main .portfolio > .design > ul {
+main .portfolio .design > ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 1rem;
 }
-main .portfolio > .design > ul > li {
+main .portfolio .design > ul > li {
   width: 100%;
   max-width: 280px;
   border-radius: 8px;
@@ -938,41 +914,41 @@ main .portfolio > .design > ul > li {
   opacity: 0;
   cursor: pointer;
 }
-main .portfolio > .design > ul > li.on {
+main .portfolio .design > ul > li.on {
   animation: opacity 0.3s ease-in normal;
   opacity: 1;
 }
-main .portfolio > .design > ul > li.on.on:nth-of-type(1) {
+main .portfolio .design > ul > li.on.on:nth-of-type(1) {
   animation-duration: 0.1s;
 }
-main .portfolio > .design > ul > li.on.on:nth-of-type(2) {
+main .portfolio .design > ul > li.on.on:nth-of-type(2) {
   animation-duration: 0.2s;
 }
-main .portfolio > .design > ul > li.on.on:nth-of-type(3) {
+main .portfolio .design > ul > li.on.on:nth-of-type(3) {
   animation-duration: 0.3s;
 }
-main .portfolio > .design > ul > li.on.on:nth-of-type(4) {
+main .portfolio .design > ul > li.on.on:nth-of-type(4) {
   animation-duration: 0.4s;
 }
-main .portfolio > .design > ul > li.on.on:nth-of-type(5) {
+main .portfolio .design > ul > li.on.on:nth-of-type(5) {
   animation-duration: 0.5s;
 }
-main .portfolio > .design > ul > li.on.on:nth-of-type(6) {
+main .portfolio .design > ul > li.on.on:nth-of-type(6) {
   animation-duration: 0.6s;
 }
-main .portfolio > .design > ul > li.on.on:nth-of-type(7) {
+main .portfolio .design > ul > li.on.on:nth-of-type(7) {
   animation-duration: 0.7s;
 }
-main .portfolio > .design > ul > li.on.on:nth-of-type(8) {
+main .portfolio .design > ul > li.on.on:nth-of-type(8) {
   animation-duration: 0.8s;
 }
-main .portfolio > .design > ul > li.on.on:nth-of-type(9) {
+main .portfolio .design > ul > li.on.on:nth-of-type(9) {
   animation-duration: 0.9s;
 }
-main .portfolio > .design > ul > li.on.on:nth-of-type(10) {
+main .portfolio .design > ul > li.on.on:nth-of-type(10) {
   animation-duration: 1s;
 }
-main .portfolio > .design > ul > li > p {
+main .portfolio .design > ul > li > p {
   font-family: "chosunKg";
   font-size: 16px;
   font-weight: bold;
@@ -986,16 +962,16 @@ main .portfolio > .design > ul > li > p {
   z-index: 1;
   display: none;
 }
-main .portfolio > .design > ul > li > img {
+main .portfolio .design > ul > li > img {
   width: 100%;
 }
-main .portfolio > .design > ul > li:hover > p {
+main .portfolio .design > ul > li:hover > p {
   display: block;
 }
-main .portfolio > .design > ul > li:hover img {
+main .portfolio .design > ul > li:hover img {
   filter: brightness(0.3);
 }
-main .portfolio > .design > ul > li details {
+main .portfolio .design > ul > li details {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1007,15 +983,16 @@ main .portfolio > .design > ul > li details {
   padding: 2rem;
   border-radius: 12px;
 }
-main .portfolio > .design > ul > li details.on {
+main .portfolio .design > ul > li details.on {
   display: block;
 }
-main .portfolio > .design > ul > li details img,
-main .portfolio > .design > ul > li details video {
+main .portfolio .design > ul > li details img,
+main .portfolio .design > ul > li details video {
   width: 100%;
+  max-width: 400px;
   margin: 1.5rem 0;
 }
-main .portfolio > .design > ul > li details p {
+main .portfolio .design > ul > li details p {
   color: white;
   text-transform: uppercase;
   font-family: "chosunKg";
@@ -1023,22 +1000,19 @@ main .portfolio > .design > ul > li details p {
   font-weight: bold;
   margin: 0 0 1rem 0;
 }
-main .portfolio > .design > ul > li details ul {
+main .portfolio .design > ul > li details ul {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
-main .portfolio > .design > ul > li details ul li {
+main .portfolio .design > ul > li details ul li {
   color: white;
   text-transform: uppercase;
   font-family: "chosunSg";
   font-size: 14px;
   font-weight: lighter;
-  word-break: keep-all;
-  line-height: 150%;
 }
 main .contact {
-  margin: 120px auto;
+  margin: 170px auto;
 }
 main .contact h2 {
   color: white;
@@ -1072,7 +1046,6 @@ main .contact .wrap p {
   gap: 1em;
   position: relative;
   word-break: keep-all;
-  transform: translateY(-100%);
 }
 main .contact .wrap p span {
   font-family: "chosunSg";
@@ -1092,7 +1065,6 @@ main .contact .wrap ul {
 }
 main .contact .wrap ul li {
   color: #ccc;
-  opacity: 0.4;
   font-family: "chosunSg";
   font-size: 16px;
   line-height: 30px;
@@ -1102,11 +1074,11 @@ main .contact .wrap ul li span {
   height: 20px;
   text-indent: -9999px;
   overflow: hidden;
-  background: url(/katalk.b4a24e3b.svg) center/20px no-repeat;
+  background: url(/katalk.b4a24e3b.317f6bc4.svg) center/20px no-repeat;
   display: inline-block;
 }
 main .contact .wrap ul li:nth-child(2) span {
-  background-image: url(/email.d035182d.svg);
+  background-image: url(/email.d035182d.19cf26ce.svg);
 }
 main .contact .wrap form {
   width: 100%;
@@ -1232,7 +1204,7 @@ footer h2 {
   overflow: hidden;
   width: 60px;
   height: 50px;
-  background: url(/8th_logo_white.9ff37284.png) center/60px no-repeat;
+  background: url(/8th_logo_white.9ff37284.064b3ca7.png) center/60px no-repeat;
   opacity: 0.4;
   margin: auto;
   display: block;
@@ -1257,84 +1229,58 @@ footer p {
     justify-content: flex-start;
   }
 }
-@media (max-width: 1240px) {
-  body main .about .profile {
+@media (max-width: 1200px) {
+  .profile {
     flex-direction: column;
     margin-bottom: 120px;
   }
-  body main .about .profile + details ul {
-    grid-template-columns: repeat(6, 1fr);
-    max-width: 80%;
-  }
-  body main .about .study .wrap {
-    max-width: 1087px;
+  .study .wrap {
+    max-width: 960px;
     overflow-x: hidden;
   }
-  body main .about .merit .wrap ul {
-    column-gap: 20%;
+  .merit {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+  }
+  .merit .wrap ul {
+    column-gap: normal;
     max-width: 1000px;
   }
 }
 @media (max-width: 1050px) {
-  body main .about .profile + details ul {
-    max-width: 100%;
-  }
-  body main .about .study .wrap {
+  .study .wrap {
     width: 100%;
-    max-width: 885px;
+    max-width: 595px;
   }
-  body main .about .merit {
-    width: 100%;
-    max-width: 750px;
-    margin: auto;
+  .merit .wrap ul {
+    column-gap: normal;
+    width: 100% p;
+    width-font-size: 0.8rem;
   }
-  body main .about .merit .wrap ul {
-    column-gap: 10%;
-    width: 100%;
-  }
-  body main .about .merit .wrap ul p {
-    font-size: 0.8rem;
-  }
-  body main .portfolio .cording ul li a .cording-img {
-    width: 180px;
-    height: 180px;
-  }
-  body main .portfolio > .design ul {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 920px;
-    margin: auto;
-    column-gap: 10px;
-  }
-  body main .contact .wrap {
+  .contact .wrap {
     flex-direction: column;
     max-width: fit-content;
   }
-  body main .contact .wrap p {
+  .contact .wrap p {
     text-align: center;
     margin-bottom: 20px;
-    transform: translateY(0%);
   }
-  body main .contact .wrap p span {
+  .contact .wrap p span {
     text-align: left;
-  }
-  body main .contact .wrap ul {
-    transform: translateY(100%);
-  }
-  body main .contact .wrap ul li {
-    line-height: 20px;
   }
 }
 @media (max-width: 810px) {
-  body header {
+  header {
     padding: 0 16px;
     position: fixed;
     width: 100%;
     z-index: 22;
   }
-  body header > ul {
+  header > ul {
     display: none;
   }
-  body header nav > ul {
+  header nav > ul {
     position: fixed;
     top: 0%;
     left: 0%;
@@ -1345,124 +1291,56 @@ footer p {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
-    transform: translateX(200%);
+    transform: translateX(100%);
     transition: 0.5s ease-out;
   }
-  body header nav > ul.on {
+  header nav > ul.on {
     transform: translateX(0);
   }
-  body header .mobile {
+  header .mobile {
     display: block;
     top: 50%;
     right: 16px;
-    transform: translateY(-50%);
+    transform: translate(-125%, -50%);
     z-index: 22;
     cursor: pointer;
   }
-  body header .mobile.on::before {
+  header .mobile.on::before {
     transform-origin: left;
     transform: rotate(45deg) translate(3px, -2px);
     transition: 0.5s linear;
   }
-  body header .mobile.on::after {
+  header .mobile.on::after {
     transform-origin: left;
     transform: rotate(-45deg) translate(3px, 1px);
     transition: 0.5s linear;
   }
-  body header .mobile.on span {
+  header .mobile.on span {
     opacity: 0;
     transition: 0.5s linear;
   }
-  body main .slogan .orbit {
+  .slogan .orbit {
     position: absolute;
     bottom: 30%;
   }
-  body main .about .study .wrap {
-    max-width: 595px;
+  .study .wrap {
+    max-width: 300px;
   }
-  body main .about .merit .wrap ul {
-    column-gap: normal;
+  .merit {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
   }
-  body main .about .merit .wrap ul .good {
-    padding: 1em 0.5em 0;
-  }
-  body main .portfolio .cording ul li a .cording-img {
-    display: none;
-  }
-  body main .portfolio .design ul {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 600px;
-  }
-  body main .portfolio .design ul li details {
-    padding: 1.5em;
-    width: 80%;
+  .merit .wrap ul {
+    column-gap: 0%;
   }
 }
 @media (max-width: 680px) {
-  body main .slogan .sloganT {
-    font-size: 1.2em;
-  }
-  body main .about {
-    padding: 1em;
-  }
-  body main .about h2 {
-    font-size: 1.5em;
-  }
-  body main .about .study .wrap {
-    max-width: 570px;
-  }
-  body main .about .study .wrap .container {
-    min-width: 260px;
-  }
-  body main .about .merit .wrap ul .good h4 {
-    font-size: 1.2em;
-  }
-  body main .portfolio .cording ul {
-    margin-top: 20px;
-  }
-  body main .portfolio .cording ul li a {
-    font-size: 1em;
-    padding: 1.5em 0;
-  }
-  body main .portfolio .design ul li details {
-    padding: 1em;
-  }
   .contact {
     padding: 16px;
   }
 }
-@media (max-width: 610px) {
-  body header {
-    padding: 0;
-  }
-  body main .about .study .wrap {
-    max-width: 295px;
-  }
-  body main .about .study .wrap .container {
-    min-width: 260px;
-  }
-  body main .about .merit .wrap ul .good {
-    width: 100%;
-    max-width: 180px;
-    height: 100%;
-    max-height: 150px;
-  }
-  body main .portfolio > .design > ul {
-    grid-template-columns: repeat(1, 1fr);
-    max-width: 320px;
-  }
-  body main .portfolio > .design > ul > .design {
-    max-width: 100%;
-  }
-  body main .contact {
-    padding: 16px;
-  }
-}
-@media (max-width: 445px) {
-  body main .about .merit .wrap .ul .good {
-    width: 100%;
-    max-width: 130px;
-  }
-}
 
-/*# sourceMappingURL=/main.39afc03c.css.map */
+
+
+/*# sourceMappingURL=/main.39afc03c.297f0da0.css.map */

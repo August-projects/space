@@ -1,4 +1,5 @@
 "use strict";
+import Swiper from 'swiper';
 
 //side nav
 const side = document.querySelector("nav").innerHTML;
@@ -18,14 +19,28 @@ document.querySelectorAll("nav li, header>ul li").forEach(function (li) {
             left: 0,
             behavior: "smooth"
         });
+
+        let closeMobile = document.querySelector("header nav ul").classList.contains("on");
+        if(closeMobile) {
+            document.querySelector("header nav ul.on").classList.remove("on");
+            document.querySelector("header .mobile.on").classList.remove("on");
+        }
+
         return false;
     })
 })
 
+//mobile nav
+document.querySelector(".mobile").addEventListener("click", (e) => {
+    document.querySelector("header nav>ul").classList.toggle("on");
+    document.querySelector("body").classList.toggle("no-scroll");
+    document.querySelector(".mobile").classList.toggle("on");   
+})
+
 //ufo
 setInterval(function () {
-    let x = Math.ceil(Math.random() * 100);
-    let y = Math.ceil(Math.random() * 100);
+    let x = Math.ceil(Math.random() * 50);
+    let y = Math.ceil(Math.random() * 50);
     let sloganUfo = document.querySelector(".ufo");
     sloganUfo.style.left = x + "%";
     sloganUfo.style.top = y + "%";
@@ -134,7 +149,7 @@ const designClick = document.querySelectorAll(".design>ul>li");
 const designDetails = document.querySelectorAll(".design details");
 const backDrop = document.querySelector(".back-drop");
 let detailIndex = 0;
-    //open
+//open
 designClick.forEach((clicking, index) => {
     clicking.addEventListener("click", () => {
         detailIndex = index;
@@ -143,10 +158,10 @@ designClick.forEach((clicking, index) => {
         document.body.classList.add("no-scroll");
     })
 })
-    //close
+//close
 backDrop.addEventListener("click", () => {
     let video = document.querySelector(".design details.on video");
-    if(video) {
+    if (video) {
         video.pause();
         video.currentTime = 0;
     }
@@ -155,6 +170,7 @@ backDrop.addEventListener("click", () => {
     backDrop.classList.remove("on");
     document.body.classList.remove("no-scroll");
 })
+
 
 
 //scrollevent
@@ -172,24 +188,28 @@ window.addEventListener("scroll", function () {
     let meritHeight = merit.offsetTop - h;
 
     let headerOn = document.querySelector("header>ul .on");
+    let movHeaderOn = document.querySelector("nav>ul .on");
     let svgOn = document.querySelectorAll(".merit .on");
 
-    if (headerOn) {
+    if (headerOn || movHeaderOn) {
         headerOn.classList.remove("on");
+        movHeaderOn.classList.remove("on");
     }
 
     if (t >= 0 && t < menu2) {
         document.querySelector("header>ul li:nth-of-type(1)").classList.add("on");
+        document.querySelector("header nav li:nth-of-type(1)").classList.add("on");
     }
 
     else if (t >= menu2 && t < menu3) {
         document.querySelector("header>ul li:nth-of-type(2)").classList.add("on");
+        document.querySelector("header nav li:nth-of-type(2)").classList.add("on");
         document.querySelector(".profile img").classList.add("on");
         document.querySelector(".profile h3").classList.add("on");
         document.querySelector(".profile ul").classList.add("on");
         document.querySelector(".profile button").classList.add("on");
 
-        document.querySelector(".study>h3").classList.add("on");
+        document.querySelector(".study h3").classList.add("on");
 
         const studyHeight = document.querySelector(".study").offsetTop - h;
         if (t >= studyHeight) {
@@ -200,7 +220,7 @@ window.addEventListener("scroll", function () {
         }
 
         else {
-            document.querySelector(".study>h3").classList.remove("on");
+            document.querySelector(".study h3").classList.remove("on");
             document.querySelectorAll(".card").forEach((card) => {
                 card.classList.remove("in");
             })
@@ -228,17 +248,17 @@ window.addEventListener("scroll", function () {
 
         else {
             document.querySelector(".merit svg").classList.remove("on");
-            document.querySelectorAll(".merit .path").forEach(function (element) {
+            document.querySelectorAll(".merit .path").forEach((element) => {
                 element.classList.remove("on");
             })
-            document.querySelectorAll(".good").forEach(function (e) {
+            document.querySelectorAll(".good").forEach((e) => {
 
                 e.classList.remove("on");
             })
         }
 
         let categoryOn = document.querySelector(".portfolio > .wrap.on");
-        if(categoryOn){
+        if (categoryOn) {
             categoryOn.classList.remove("on");
         }
 
@@ -252,6 +272,8 @@ window.addEventListener("scroll", function () {
 
     else if (t >= menu3 && t < menu4) {
         document.querySelector("header>ul li:nth-of-type(3)").classList.add("on");
+        document.querySelector("header nav li:nth-of-type(3)").classList.add("on");
+
         document.querySelector(".merit svg").classList.remove("on");
         document.querySelectorAll(".merit .path").forEach(function (element) {
             element.classList.remove("on");
@@ -275,5 +297,33 @@ window.addEventListener("scroll", function () {
 
     else {
         document.querySelector("header>ul li:nth-of-type(4)").classList.add("on");
-    }
-})
+        document.querySelector("header nav li:nth-of-type(4)").classList.add("on");
+
+    };
+});
+
+//swiper js
+const swiper = new Swiper(".mySwiper", {
+    grabCursor: true,
+    slidesPerView: 4,
+    pagination: {
+        el: ".swiper-pagination",
+      },
+    breakpoints: {
+        "@0.280": {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        "@0.580": {
+            slidesPerView: 2,
+        },
+        "@0.885": {
+            slidesPerView: 3,
+        },
+        "@1.303": {
+            slidesPerView: 4,
+            spaceBetween: 0,
+        },
+    },
+});
+

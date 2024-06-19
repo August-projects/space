@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="/main.39afc03c.css">
     <script defer="" src="/space.e31bb0bc.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script defer="" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="/main.39afc03c.js"></script></head>
 
 <body>
@@ -35,7 +38,7 @@
                     <li>contact</li>
                 </ul>
             </nav>
-            <button class="mobile"><span>mobile</span></button>
+            <button class="mobile "><span>mobile</span></button>
         </header>
         <main>
             <section class="slogan">
@@ -89,91 +92,94 @@
                 </details>
                 <article class="study">
                     <h3>study</h3>
-                    <ul>
-                        <li class="container">
-                            <div class="card">
-                                <div class="front html"><span>html</span></div>
-                                <details open="" class="back">
-                                    <summary class="screen_out">html study</summary>
-                                    <h4>hyper text markup language</h4>
-                                    <p>웹 표준을 고려하여 기본에 충실하고 의미있는 마크업</p>
-                                    <ul>
-                                        <li>html요소(태그)</li>
-                                        <li>웹 표준 마크업</li>
-                                        <li>form문 활용 검색창 생성</li>
-                                    </ul>
-                                    <a href="#">더보기</a>
-                                </details>
-                            </div>
-                        </li>
-                        <li class="container">
-                            <div class="card">
-                                <div class="front css"><span>css</span></div>
-                                <details open="" class="back">
-                                    <summary class="screen_out">css study</summary>
-                                    <h4>CASCADING STYLE SHEET</h4>
-                                    <p>디자인을 강조하는 애니메이션 <br> 사용환경을 고려한 반응형 웹 디자인</p>
-                                    <ul>
-                                        <li>css 주요 속성</li>
-                                        <li>가상클래스(가상요소)</li>
-                                        <li>웹폰트+폰트어썸</li>
-                                        <li>레이아웃</li>
-                                        <li>IR / IS 기법</li>
-                                        <li>구체성</li>
-                                        <li>트랜지션+트랜스폼</li>
-                                        <li>CSS 변수</li>
-                                        <li>3D</li>
-                                        <li>반응형 웹</li>
-                                        <li>SCSS</li>
-                                    </ul>
-                                    <a href="#">더보기</a>
-                                </details>
-                            </div>
-                        </li>
-                        <li class="container">
-                            <div class="card">
-                                <div class="front vanila"><span>java script</span></div>
-                                <details open="" class="back">
-                                    <summary class="screen_out">css study</summary>
-                                    <h4>객체 기반 스크립트 프로그래밍 언어 </h4>
-                                    <p>css 디자인에 동적 인터렉션과 기능과 <br> 이벤트 요소를 사용한 애니메이션</p>
-                                    <ul>
-                                        <li>자바스크립트 기본</li>
-                                        <li>연산자</li>
-                                        <li>제어문</li>
-                                        <li>DOM</li>
-                                        <li>BOM</li>
-                                        <li>함수</li>
-                                        <li>이벤트</li>
-                                        <li>이벤트 객체</li>
-                                    </ul>
-                                    <a href="#">더보기</a>
-                                </details>
-                            </div>
-                        </li>
-                        <li class="container">
-                            <div class="card">
-                                <div class="front jquery"><span>j query</span></div>
-                                <details open="" class="back">>
-                                    <summary class="screen_out">css study</summary>
-                                    <h4>객체 기반 스크립트 프로그래밍 언어 </h4>
-                                    <p>J Query를 활용하여 Java Script 기능을 편리하게 사용 가능</p>
-                                    <ul>
-                                        <li>JQuery 기본 메서드</li>
-                                        <li>이벤트와 애니메이션</li>
-                                        <li>풀화면 무한 슬라이드</li>
-                                        <li>카테고리 + 모달팝업</li>
-                                        <li>반응형 이미지 사이즈</li>
-                                        <li>반응형 메인메뉴</li>
-                                        <li>마우스에 반응하는 디자인</li>
-                                        <li>글자 타이핑 효과</li>
-                                        <li>랜덤 함수 활용 등</li>
-                                    </ul>
-                                    <a href="#">더보기</a>
-                                </details>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="wrap swiper mySwiper">
+                        <ul class="swiper-wrapper">
+                            <li class="container swiper-slide">
+                                <div class="card">
+                                    <div class="front html"><span>html</span></div>
+                                    <details open="" class="back">
+                                        <summary class="screen_out">html study</summary>
+                                        <h4>hyper text markup language</h4>
+                                        <p>웹 표준을 고려하여 기본에 충실하고 의미있는 마크업</p>
+                                        <ul>
+                                            <li>html요소(태그)</li>
+                                            <li>웹 표준 마크업</li>
+                                            <li>form문 활용 검색창 생성</li>
+                                        </ul>
+                                        <a href="http://8th.kr/html/tutorial/mark_up.html" target="_blank">더보기</a>
+                                    </details>
+                                </div>
+                            </li>
+                            <li class="container swiper-slide">
+                                <div class="card">
+                                    <div class="front css"><span>css</span></div>
+                                    <details open="" class="back">
+                                        <summary class="screen_out">css study</summary>
+                                        <h4>CASCADING STYLE SHEET</h4>
+                                        <p>디자인을 강조하는 애니메이션 <br> 사용환경을 고려한 반응형 웹 디자인</p>
+                                        <ul>
+                                            <li>css 주요 속성</li>
+                                            <li>가상클래스(가상요소)</li>
+                                            <li>웹폰트+폰트어썸</li>
+                                            <li>레이아웃</li>
+                                            <li>IR / IS 기법</li>
+                                            <li>구체성</li>
+                                            <li>트랜지션+트랜스폼</li>
+                                            <li>CSS 변수</li>
+                                            <li>3D</li>
+                                            <li>반응형 웹</li>
+                                            <li>SCSS</li>
+                                        </ul>
+                                        <a href="http://8th.kr/html/tutorial/css.html" target="_blank">더보기</a>
+                                    </details>
+                                </div>
+                            </li>
+                            <li class="container swiper-slide">
+                                <div class="card">
+                                    <div class="front vanila"><span>java script</span></div>
+                                    <details open="" class="back">
+                                        <summary class="screen_out">css study</summary>
+                                        <h4>객체 기반 스크립트 프로그래밍 언어 </h4>
+                                        <p>css 디자인에 동적 인터렉션과 기능과 <br> 이벤트 요소를 사용한 애니메이션</p>
+                                        <ul>
+                                            <li>자바스크립트 기본</li>
+                                            <li>연산자</li>
+                                            <li>제어문</li>
+                                            <li>DOM</li>
+                                            <li>BOM</li>
+                                            <li>함수</li>
+                                            <li>이벤트</li>
+                                            <li>이벤트 객체</li>
+                                        </ul>
+                                        <a href="http://8th.kr/html/tutorial/js.html" target="_blank">더보기</a>
+                                    </details>
+                                </div>
+                            </li>
+                            <li class="container swiper-slide">
+                                <div class="card">
+                                    <div class="front jquery"><span>j query</span></div>
+                                    <details open="" class="back">>
+                                        <summary class="screen_out">css study</summary>
+                                        <h4>객체 기반 스크립트 프로그래밍 언어 </h4>
+                                        <p>J Query를 활용하여 Java Script 기능을 편리하게 사용 가능</p>
+                                        <ul>
+                                            <li>JQuery 기본 메서드</li>
+                                            <li>이벤트와 애니메이션</li>
+                                            <li>풀화면 무한 슬라이드</li>
+                                            <li>카테고리 + 모달팝업</li>
+                                            <li>반응형 이미지 사이즈</li>
+                                            <li>반응형 메인메뉴</li>
+                                            <li>마우스에 반응하는 디자인</li>
+                                            <li>글자 타이핑 효과</li>
+                                            <li>랜덤 함수 활용 등</li>
+                                        </ul>
+                                        <a href="http://8th.kr/html/tutorial/jquery.html" target="_blank">더보기</a>
+                                    </details>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </article>
                 <article class="merit">
                     <h3 class="screen_out">what i am good at</h3>
@@ -256,27 +262,27 @@
                         <ul>
                             <li class="good left1 ">
                                 <h4>fundamental</h4>
-                                <p>의미없는 태그를 남발하는 편리함보다 <br>시멘틱 태그를 사용하여 웹표준을 준수하는 <br>기본에 충실한 퍼블리싱을 지향합니다.</p>
+                                <p>의미없는 태그를 남발하는 편리함보다 시멘틱 태그를 사용하여 웹표준을 준수하는 기본에 충실한 퍼블리싱을 지향합니다.</p>
                             </li>
                             <li class="good right1 ">
                                 <h4>study</h4>
-                                <p>배우고 익히기를 즐기며 <br>모르는 것을 부끄러워하지 않고 <br>지속적인 학습을 통해 전문성을 키워가고 있습니다.</p>
+                                <p>배우고 익히기를 즐기며 모르는 것을 부끄러워하지 않고 지속적인 학습을 통해 전문성을 키워가고 있습니다.</p>
                             </li>
                             <li class="good left2 ">
                                 <h4>team work</h4>
-                                <p>공동체의 목표를 위해 타인의 의견에 <br>귀를 기울이는 등, 팀원과 소통하고 협력하며<br> 최선의 결과를 내기 위해 노력합니다.</p>
+                                <p>공동체의 목표를 위해 타인의 의견에 귀를 기울이는 등, 팀원과 소통하고 협력하며 최선의 결과를 내기 위해 노력합니다.</p>
                             </li>
                             <li class="good right2 ">
                                 <h4>diligent</h4>
-                                <p>안되는 것도 될 때까지! <br>모든 일에 끈기를 가지고 <br>근면성실한 마인드로 임하고 있습니다.</p>
+                                <p>안되는 것도 될 때까지! 모든 일에 끈기를 가지고 근면성실한 마인드로 임하고 있습니다.</p>
                             </li>
                             <li class="good left3 ">
                                 <h4>calm</h4>
-                                <p>앞서 겪었던 사회경험을 통해 <br>다양한 돌발 상황을 침착한 마음가짐으로 대하며 최선의 결과물을 만들어냅니다.</p>
+                                <p>앞서 겪었던 사회경험을 통해 다양한 돌발 상황을 침착한 마음가짐으로 대하며 최선의 결과물을 만들어냅니다.</p>
                             </li>
                             <li class="good right3 ">
                                 <h4>optimistic</h4>
-                                <p>긍정적인 태도와 마음가짐으로 <br>문제 상황에서도 해결책을 찾아내 <br>긍정적인 결과물을 만들어낼 수 있습니다.</p>
+                                <p>긍정적인 태도와 마음가짐으로 문제 상황에서도 해결책을 찾아내 긍정적인 결과물을 만들어낼 수 있습니다.</p>
                             </li>
                         </ul>
                     </div>
@@ -295,21 +301,23 @@
                     <h3 class="screen_out">web</h3>
                     <ul>
                         <li class="cording ">
-                            <a href="http://8th.kr/team/">selecto coffee homepage
+                            <a target="_blank" href="http://8th.kr/team/">selecto coffee homepage
                                 <span class="cording-img"></span></a>
                         </li>
                         <li class="cording ">
-                            <a target="_blank" href="http://8th.kr/%ed%98%84%eb%8c%80%ea%b7%b8%eb%a6%b0%ed%91%b8%eb%93%9c/%ed%98%84%eb%8c%80%ea%b7%b8%eb%a6%b0%ed%91%b8%eb%93%9c.html">hyundai green food homepage
+                            <a target="_blank" href="http://8th.kr/hyudai_green_food/hyudai_green_food.html">hyundai
+                                green food homepage
                                 <span class="cording-img"></span>
                             </a>
                         </li>
                         <li class="cording ">
-                            <a target="_blank" href="http://8th.kr/%ec%82%bc%ec%84%b1%eb%94%94%ec%8a%a4%ed%94%8c%eb%a0%88%ec%9d%b4%eb%89%b4%ec%8a%a4%eb%a3%b8/%ec%82%bc%ec%84%b1%eb%94%94%ec%8a%a4%ed%94%8c%eb%a0%88%ec%9d%b4%eb%89%b4%ec%8a%a4%eb%a3%b8.html">samsung display newsroom homepage
+                            <a target="_blank" href="http://8th.kr/sumsung_display_newsroom/sumsung_display_newsroom.html">samsung
+                                display newsroom homepage
                                 <span class="cording-img"></span>
                             </a>
                         </li>
                         <li class="cording ">
-                            <a target="_blank" href="#">ex - portfolio page
+                            <a target="_blank" href="http://8th.kr/version1/">ex - portfolio page
                                 <span class="cording-img"></span>
                             </a>
                         </li>
@@ -490,14 +498,12 @@
             <section class="contact">
                 <h2>contact</h2>
                 <div class="wrap">
-                    <div class="inform">
-                        <p>저에게 하고 싶은 <br>이야기가 있으신가요? <span>메시지를 남겨주시면 빠른 시일 내 답변 도와드릴게요 ! <br> 언제든 연락해주세요 :)</span></p>
-                        <h3 class="screen_out">다른 연락방법</h3>
-                        <ul>
-                            <li><span>카카오톡</span> : hongssi08</li>
-                            <li><span>이메일</span> : admin@8th.kr </li>
-                        </ul>
-                    </div>
+                    <p>저에게 하고 싶은 이야기가 있으신가요? <span>메시지를 남겨주시면 빠른 시일 내 답변 도와드릴게요 ! <br> 언제든 연락해주세요 :)</span></p>
+                    <h3 class="screen_out">다른 연락방법</h3>
+                    <ul>
+                        <li><span>카카오톡</span> : hongssi08</li>
+                        <li><span>이메일</span> : admin@8th.kr </li>
+                    </ul>
                     <form action="#" id="form">
                         <fieldset>
                             <legend class="screen_out">leave message</legend>
