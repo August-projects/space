@@ -178,6 +178,9 @@ header > ul {
   top: 50%;
   right: 1%;
   transform: translateY(-50%);
+  z-index: 22;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
 }
 header > ul li {
   color: white;
@@ -1119,7 +1122,7 @@ main .contact .wrap form fieldset {
 }
 main .contact .wrap form fieldset input {
   height: 40px;
-  font-size: 18px;
+  font-size: 16px;
   padding: 0 20px;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 25px;
@@ -1167,14 +1170,14 @@ main .contact .wrap form fieldset textarea {
   margin-bottom: 15px;
   height: 100%;
   padding: 20px;
-  font-size: 18px;
+  font-size: 16px;
 }
 main .contact .wrap form fieldset textarea:focus {
   border: 2px solid #fff;
 }
 main .contact .wrap form fieldset textarea + label {
   position: absolute;
-  margin: -221px 0 0 20px;
+  margin: -193px 0 0 20px;
   padding: 0 10px;
   transition: all 0.3s;
   background-color: black;
@@ -1186,9 +1189,13 @@ main .contact .wrap form fieldset textarea + label {
   width: fit-content;
 }
 main .contact .wrap form fieldset textarea:focus + label, main .contact .wrap form fieldset textarea.on + label {
-  font-size: 14px;
+  font-size: 18px;
   color: #fff;
-  margin: -240px 0 0 20px;
+  margin: -221px 0 0 20px;
+}
+main .contact .wrap form fieldset textarea.on + label {
+  font-size: 18px;
+  margin: -221px 0 0 20px;
 }
 main .contact .wrap form fieldset #submit {
   width: 90px;

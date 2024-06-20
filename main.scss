@@ -294,6 +294,9 @@ header {
         top: 50%;
         right: 1%;
         transform: translateY(-50%);
+        z-index: 22;
+        background-color: rgba($color: #000, $alpha: .3);
+        border-radius: 12px;
 
         li {
             color: $text-color-W;
@@ -1223,7 +1226,7 @@ main {
 
                     input {
                         height: 40px;
-                        font-size: 18px;
+                        font-size: 16px;
                         padding: 0 20px;
                         border: 2px solid $text-color-weak;
                         border-radius: 25px;
@@ -1276,7 +1279,7 @@ main {
                         margin-bottom: 15px;
                         height: 100%;
                         padding: 20px;
-                        font-size: 18px;
+                        font-size: 16px;
 
                         &:focus {
                             border: 2px solid #fff;
@@ -1284,7 +1287,7 @@ main {
 
                         &+label {
                             position: absolute;
-                            margin: -221px 0 0 20px;
+                            margin: -193px 0 0 20px;
                             padding: 0 10px;
                             transition: all .3s;
                             background-color: $text-color-B;
@@ -1298,9 +1301,14 @@ main {
 
                         &:focus+label,
                         &.on+label {
-                            font-size: 14px;
+                            font-size: 18px;
                             color: #fff;
-                            margin: -240px 0 0 20px;
+                            margin: -221px 0 0 20px;
+                        }
+
+                        &.on+label {
+                            font-size: 18px;
+                            margin: -221px 0 0 20px;
                         }
                     }
 

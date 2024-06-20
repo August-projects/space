@@ -4485,6 +4485,7 @@ document.querySelectorAll("nav li, header>ul li").forEach(function (li) {
     var closeMobile = document.querySelector("header nav ul").classList.contains("on");
     if (closeMobile) {
       document.querySelector("header nav ul.on").classList.remove("on");
+      document.querySelector("body").classList.remove("no-scroll");
       document.querySelector("header .mobile.on").classList.remove("on");
     }
     return false;
@@ -4721,6 +4722,24 @@ window.addEventListener("scroll", function () {
   ;
 });
 
+//contact
+document.querySelectorAll(".contact form input").forEach(function (input) {
+  input.addEventListener("blur", function () {
+    if (this.value.length > 0) {
+      this.classList.add("on");
+    } else {
+      this.classList.remove("on");
+    }
+  });
+});
+document.querySelector(".contact textarea").addEventListener("blur", function () {
+  if (this.value.length > 0) {
+    this.classList.add("on");
+  } else {
+    this.classList.remove("on");
+  }
+});
+
 //swiper js
 var swiper = new _swiper.default(".mySwiper", {
   grabCursor: true,
@@ -4770,7 +4789,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58210" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61940" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

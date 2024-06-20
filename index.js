@@ -23,6 +23,7 @@ document.querySelectorAll("nav li, header>ul li").forEach(function (li) {
         let closeMobile = document.querySelector("header nav ul").classList.contains("on");
         if(closeMobile) {
             document.querySelector("header nav ul.on").classList.remove("on");
+            document.querySelector("body").classList.remove("no-scroll");
             document.querySelector("header .mobile.on").classList.remove("on");
         }
 
@@ -298,9 +299,30 @@ window.addEventListener("scroll", function () {
     else {
         document.querySelector("header>ul li:nth-of-type(4)").classList.add("on");
         document.querySelector("header nav li:nth-of-type(4)").classList.add("on");
-
     };
 });
+
+//contact
+document.querySelectorAll(".contact form input").forEach(function(input) {
+    input.addEventListener("blur",function(){
+        if(this.value.length > 0) {
+            this.classList.add("on");
+        }
+        else{
+            this.classList.remove("on");
+        }
+    });
+});
+
+document.querySelector(".contact textarea").addEventListener("blur", function(){
+    if(this.value.length > 0){
+        this.classList.add("on");
+    }
+    else {
+        this.classList.remove("on");
+    }
+});
+
 
 //swiper js
 const swiper = new Swiper(".mySwiper", {
